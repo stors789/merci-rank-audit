@@ -1,4 +1,4 @@
 include CHANGELOG.md
 recursive-include docs *.md
 recursive-include tests *.py
-recursive-include reproduce *.py *.R *.md *.json *.csv *.tsv *.npz *.zip
+recursive-include reproduce *.py *.R *.md *.json *.csv *.tsv *.npz *.zip *.txt

@@ -11,7 +11,7 @@ physical mitochondrial transfer.
 Install the release wheel in an isolated Python environment:
 
 ```sh
-python -m pip install merci_rank_audit-0.1.1-py3-none-any.whl
+python -m pip install merci_rank_audit-0.1.2-py3-none-any.whl
 merci-rank-audit init-example --output ./example
 merci-rank-audit audit --manifest ./example/manifest.json --output ./exact
 merci-rank-audit audit --manifest ./example/manifest.json --output ./sampled --sample both
@@ -105,3 +105,6 @@ and experimental annotations retain their stated scopes.
 
 
 The source distribution includes the portable [reproduction materials](reproduce/README.md). The wheel contains the library and synthetic quickstart; the expanded analyses and aggregate plots are in the source distribution.
+
+
+The source distribution includes [B1 strict input preparation](reproduce/INPUTS.md#b1-and-b2-experimental-benchmarks) from four public processed files and a separately obtained upstream checkout. Frozen split 21 was regenerated in an isolated environment with byte-identical scores, composition input and member outputs. Other supported split configurations were checked statically; see the input guide for the executed scope.

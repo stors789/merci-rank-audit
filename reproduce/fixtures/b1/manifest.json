@@ -1,0 +1,70 @@
+{
+  "status": "synthetic engineering fixture; existing B1 split21 selection seeds",
+  "cases": [
+    {
+      "experiment": "fixture",
+      "stage": "synthetic",
+      "split": 1,
+      "case": "strict_regular_mixed",
+      "source": "mixed.tsv",
+      "score_sha256": "8d0c1a00823053425755115480889b93b9fa9cf56dc18fd57a427a06ac66a4cf",
+      "ordered_ID_sha256": "f251dc7185aae5087cff00abe84bad7d86d7ecee416cc7b6b700db5fdbaf6b73",
+      "N": 20,
+      "maxima": [
+        20,
+        0,
+        17,
+        15,
+        13,
+        11,
+        9,
+        7,
+        5,
+        3
+      ]
+    },
+    {
+      "experiment": "fixture",
+      "stage": "synthetic",
+      "split": 1,
+      "case": "strict_regular_negative",
+      "source": "negative.tsv",
+      "score_sha256": "c26fa8b69a3f83eaddbbaa58f6bba07298e5f20229154d32ff5146cb64f202ab",
+      "ordered_ID_sha256": "66207f198ce186229fc5977bd371fc19da043e1bdbc258d21e20f21ffb65480c",
+      "N": 12,
+      "maxima": [
+        12,
+        0,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3
+      ]
+    }
+  ],
+  "splits": [
+    {
+      "experiment": "fixture",
+      "stage": "synthetic",
+      "split": 1,
+      "prepared": "not-yet-generated.npz",
+      "prepared_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "M": 12,
+      "CC_available": 8,
+      "anchor_N": 6,
+      "background_slots": 6,
+      "CC_seed": 9352356834103110976,
+      "anchor_seed": 2707347079002349412,
+      "background_seed": 3116512644765940171,
+      "CC_order_ID_sha256": "3c885fb373dc50d86ec7db04ced37712b7da9166c20e2e4269d07e08c92b709c",
+      "anchor_ID_sha256": "50a3ac6294b9e3b0577c18667850550b569c276ab951305b607865e13de31a9b",
+      "background_ID_sha256": "a46e454e97ebe828a8fbb85c2321ccec0c5043b2c73c4b0c955d047b5fa8ca55",
+      "untied_MC_N": 12
+    }
+  ],
+  "null_maxima": "../cohort/null_maxima.csv"
+}

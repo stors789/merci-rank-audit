@@ -26,6 +26,7 @@ def main():
         if sha(path) != item['score_sha256']:
             raise ValueError('strict score differs from frozen input: ' + str(path))
         raw = task_arrays(path)
+        raw['observed_source_features'] = np.asarray(raw['observed_source_features'], dtype=float)
         frame = pd.read_csv(path, sep='\t', compression='infer', dtype={'cell': str}, float_precision='round_trip')
         raw['rna_score'] = pd.to_numeric(frame.RNA_score, errors='raise').to_numpy(float)
         raw['rna_tied'] = pd.Series(raw['rna_score']).duplicated(keep=False).to_numpy()

@@ -1,0 +1,9 @@
+# Tested Python 3.12.3 environment for the accepted B1 split21 reproduction.
+merci-rank-audit==0.1.2
+numpy==2.5.4
+pandas==3.1.0
+scipy==1.18.1
+matplotlib==3.11.2
+pypdf==6.21.0
+reportlab==4.4.9
+pytest==9.2.0

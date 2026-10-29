@@ -1,0 +1,13 @@
+cell	Neff	RNA_rank	DNA_rank	RNA_score	truth	observed_source_features
+synthetic_00	0	1	1	0.0	False	NA
+synthetic_01	0	2	2	1.0	False	1
+synthetic_02	0	3	3	2.0	False	0
+synthetic_03	0	4	4	3.0	False	1
+synthetic_04	0	5	5	4.0	False	0
+synthetic_05	0	6	6	5.0	False	1
+synthetic_06	0	7	7	6.0	False	0
+synthetic_07	0	8	8	7.0	False	1
+synthetic_08	0	9	9	8.0	False	0
+synthetic_09	0	10	10	9.0	False	1
+synthetic_10	0	11	11	10.0	False	0
+synthetic_11	0	12	12	11.0	False	1

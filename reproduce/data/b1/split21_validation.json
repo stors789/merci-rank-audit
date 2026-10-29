@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "scope": "B1 frozen strict split 21; engineering reproduction of an existing case",
+  "inputs": "four public Zenodo 8065206 bench1 processed files; original data not redistributed",
+  "upstream_commit": "79e105aaf13159bee325c3ceceb6ee679e430341",
+  "split": 21,
+  "split_seed": 202610281,
+  "composition_seeds": {
+    "CC_order": 9352356834103110976,
+    "anchor": 2707347079002349412,
+    "background": 3116512644765940171
+  },
+  "groups": {
+    "donor": 1669,
+    "reference_MC": 3786,
+    "test_MC": 3786,
+    "CC": 2904,
+    "mixed_N": 6690,
+    "negative_N": 3786,
+    "fixedN_anchor": 1893,
+    "background_slots": 1893
+  },
+  "strict_source_features": 2159,
+  "original_input_comparison": {
+    "ordered_roles_and_feature_selection": "identical",
+    "all_13_score_fields_and_row_order": "identical",
+    "mixed_score_sha256": "fffc9e9cd36782b68b1831a12f2dad8d4f17d69a93658c8aac55b6b27f521998",
+    "negative_score_sha256": "149fa1712c5019d8bd33162dbcb6d0767801527a465af5e4d633beba7c246673",
+    "prepared_sha256": "dc9208e8f0562a69b26d8c4b9ea04d1d638d61d5647ad79f710fe10aad8a4ea8",
+    "prepared_arrays_equal": 11,
+    "task_and_condition_member_files_byte_identical": 12
+  },
+  "aggregate_comparison_rows": {
+    "task_summary": 2,
+    "policy_metrics": 10,
+    "partition_truth": 36,
+    "error_fractions": 12,
+    "family_differences": 2,
+    "conditions": 90,
+    "transitions": 540,
+    "channels": 80,
+    "joint": 720,
+    "calls": 40
+  },
+  "fixedN_endpoint_reference": {
+    "N": 1893,
+    "raw_core_to_outside": 303,
+    "raw_outside_to_core": 0
+  },
+  "runtime": {
+    "python": "3.12.3",
+    "R": "4.4.1",
+    "threads": 1,
+    "nice": 10,
+    "address_space_limit_bytes": 4294967296,
+    "wall_seconds": 41.34,
+    "peak_RSS_KiB": 2750128,
+    "swaps": 0
+  },
+  "actual_runs": "Only frozen split 21; same input/seed reruns include a representation fix and candidate-package validation.",
+  "other_splits": "21\u2013100 are specified and supported; the other 79 were not executed in this validation.",
+  "personal_identifiers_and_raw_data": "not included"
+}

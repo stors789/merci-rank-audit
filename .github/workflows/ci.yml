@@ -33,3 +33,11 @@ jobs:
           python -m pytest -q tests
       - name: Check analysis drivers and redraw all figures
         run: python reproduce/verify.py --output "$RUNNER_TEMP/merci-reproduce-check"
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.4.1'
+          use-public-rspm: true
+      - name: Check synthetic coverage axes and observation denominators
+        run: |
+          Rscript -e 'install.packages("data.table", repos = "https://cloud.r-project.org")'
+          Rscript reproduce/fixtures/b1/check_coverage.R reproduce/drivers/b1/read_coverage.R reproduce/fixtures/b1/coverage.tsv

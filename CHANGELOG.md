@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2
+
+- Add an explicit B1 frozen strict split preparation from the four public processed inputs and pinned upstream MERCI checkout.
+- Preserve the historical float64 observed-source-feature representation in cohort preparation.
+- Record newly generated and historical identities separately; do not reuse old samples.
+
 ## 0.1.1
 
 - Include portable aggregate plotting and analysis-reproduction materials in the source distribution.

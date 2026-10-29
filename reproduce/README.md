@@ -10,6 +10,9 @@ Three reproducibility levels are distinct:
 
 ## Install and verify
 
+Exact versions from the accepted B1 reconstruction are listed in
+[ENVIRONMENT.md](ENVIRONMENT.md) with a Python 3.12 constraints file.
+
 Use Python 3.10 or newer. From an extracted source distribution or checkout:
 
 ```sh
@@ -22,7 +25,7 @@ python reproduce/verify.py --output /tmp/merci-reproduce-check
 
 The output directory must not exist. The `reproduce` extra installs Matplotlib ≥3.8,<4, pypdf ≥4,<7 and ReportLab ≥4,<5. NumPy, pandas and SciPy versions are constrained by the installed library. For reproducible resource use, set `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1` before execution. On Linux the previous analysis used one core, nice 10 and an address-space ceiling of 4 GiB; these execution policies are not hidden inside the scripts.
 
-`verify.py` executes the original rare synthetic benchmark's first seed for 100 proposals, a 20-cell synthetic composition task and ten conditions, 100 conditional synthetic nuclear proposals, and four synthetic tie/threshold scenarios. It checks frozen benchmark RMSE, expected confusion counts and transition totals, an independent least-squares coefficient, the 500-valid-beta reporting threshold, and exact hypergeometric gate probabilities. It separately renders and parses all ten figure PDFs and PNGs. Fixture inputs are synthetic; `private_members` outputs can contain IDs when real inputs are supplied and should remain private.
+`verify.py` also checks B1 synthetic score binding, preparation and the original float64 observation representation and missing-value handling. It executes the original rare synthetic benchmark's first seed for 100 proposals, a 20-cell synthetic composition task and ten conditions, 100 conditional synthetic nuclear proposals, and four synthetic tie/threshold scenarios. It checks frozen benchmark RMSE, expected confusion counts and transition totals, an independent least-squares coefficient, the 500-valid-beta reporting threshold, and exact hypergeometric gate probabilities. It separately renders and parses all ten figure PDFs and PNGs. Fixture inputs are synthetic; `private_members` outputs can contain IDs when real inputs are supplied and should remain private.
 
 ## Figures and data mapping
 
@@ -48,6 +51,10 @@ python "$REPRO/figures/bio06_figure.py" --data "$REPRO/data/bio06" --output "$OU
 | S5 | `data/bio06/rarity_comparison.csv`, both cases at original RNA ranks, eleven threshold tables each; other BIO-06 aggregate source and threshold tables are in `data/bio06/`. |
 
 The selected CSVs preserve source numerical precision. `data/supplementary_data.zip` is the original 59-table aggregate supplement with its own manifest; it contains broader checkpoint, family, composition and nuclear tables. Figures S1–S4 were redrawn using portable code, so their presentation can differ slightly from the original snapshots without changing values. See [SOURCE_MAP.md](SOURCE_MAP.md) for provenance and rights.
+
+## B1 strict input preparation
+
+The source distribution provides a B1 strict entry point from the four public processed input files and the separately obtained pinned MERCI checkout. It supports the frozen B1 split numbers 21–100; split 21 was actually regenerated and compared in the development environment. It produces new private scores and a new cohort manifest before running the two tasks and ten conditions. See [INPUTS.md](INPUTS.md#b1-and-b2-experimental-benchmarks) for the explicit command, historical identity checks, resource and rights boundaries.
 
 ## Four full analysis entry points
 
@@ -77,4 +84,4 @@ The P2 precision config names the four historical sequences; `--all-outcomes` ru
 
 ## Software status
 
-The currently public software release is [0.1.0](https://github.com/stors789/merci-rank-audit/releases/tag/v0.1.0), with 22 external CI tests passed. This expanded 0.1.1 source package is prepared locally; its public release and hosted CI status must be recorded only after they actually occur. Project-authored code is MIT-licensed. The separate upstream MERCI checkout and underlying public data retain their own rights. No biological individual-cell data or restricted upstream source is included.
+Fixed releases and their distribution assets are available on the [release page](https://github.com/stors789/merci-rank-audit/releases). The CI workflow runs the core tests, small driver/preparation checks, all ten figure redraws and the synthetic R coverage check. Project-authored code is MIT-licensed. The separate upstream MERCI checkout and underlying public data retain their own rights. No biological individual-cell data or restricted upstream source is included.

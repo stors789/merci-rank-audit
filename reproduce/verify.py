@@ -29,6 +29,15 @@ def main():
     name='formal_n100_tie50_single50_rare_target'
     run('drivers/benchmark/run.py','--config',root/'configs/benchmark_smoke.json','--case',name,'--output',out/'benchmark')
     run('drivers/cohort/run.py','--manifest',root/'configs/cohort_smoke.json','--output',out/'cohort')
+    run('fixtures/b1/check_prepare.py','--output',out/'b1-preparation-fixture')
+    formal=json.loads((root/'configs/cohort_formal_portable.json').read_text())
+    for split in range(21,101):
+        cases=[x for x in formal['cases'] if x['experiment']=='bench1' and x['split']==split
+               and x['case'] in ('strict_regular_mixed','strict_regular_negative')]
+        selections=[x for x in formal['splits'] if x['experiment']=='bench1' and x['split']==split]
+        assert len(cases)==2 and len(selections)==1 and sorted(x['N'] for x in cases)==[3786,6690]
+        assert (selections[0]['M'],selections[0]['CC_available'],selections[0]['anchor_N'],
+                selections[0]['background_slots'])==(3786,2904,1893,1893)
     run('drivers/nuclear/run.py','--manifest',root/'configs/nuclear_smoke_manifest.json','--config',root/'configs/nuclear_smoke.json',
         '--stream','reference','--output',out/'nuclear')
     run('drivers/sensitivity/run.py','--config',root/'configs/sensitivity_smoke.json','--output',out/'sensitivity')
@@ -67,6 +76,8 @@ def main():
         assert len(PdfReader(fig/(name+'.pdf')).pages)==1
     result={'status':'PASS','benchmark':'known original-seed 100-proposal prefix',
             'cohort':'one synthetic task, ten design conditions and exhaustive transition totals',
+            'b1_preparation':'two synthetic score tasks, frozen selection seeds and float64/NA prepared representation',
+            'b1_frozen_split_configs_checked':80,
             'nuclear':'100 proposals, first beta matches independent OLS; low-valid quantiles withheld',
             'sensitivity':'four synthetic scenarios; two single-gate probabilities equal hypergeometric truth',
             'redrawn_figures':expected,'scope':'engineering checks; no full raw-data rerun'}
