@@ -31,6 +31,7 @@ def main():
     run('drivers/cohort/run.py','--manifest',root/'configs/cohort_smoke.json','--output',out/'cohort')
     run('fixtures/b1/check_prepare.py','--output',out/'b1-preparation-fixture')
     run('fixtures/benchmark_inputs/check_config.py')
+    run('fixtures/gbml/check_thresholds.py')
     formal=json.loads((root/'configs/cohort_formal_portable.json').read_text())
     for split in range(21,101):
         cases=[x for x in formal['cases'] if x['experiment']=='bench1' and x['split']==split
@@ -80,6 +81,7 @@ def main():
             'b1_preparation':'two synthetic score tasks, frozen selection seeds and float64/NA prepared representation',
             'b1_frozen_split_configs_checked':80,
             'benchmark_input_configs_checked':720,
+            'gbml_frozen_threshold_integrity':'original table accepted; altered maximum rejected',
             'nuclear':'100 proposals, first beta matches independent OLS; low-valid quantiles withheld',
             'sensitivity':'four synthetic scenarios; two single-gate probabilities equal hypergeometric truth',
             'redrawn_figures':expected,'scope':'engineering checks; no full raw-data rerun'}

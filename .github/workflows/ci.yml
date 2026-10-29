@@ -25,6 +25,17 @@ jobs:
         run: |
           python -m pip install build setuptools wheel pytest
           python -m build --no-isolation --sdist --wheel
+      - name: Check source distribution contains the native extractor
+        run: |
+          python - <<'PY_SOURCE'
+          from pathlib import Path
+          import tarfile
+          archive, = Path('dist').glob('*.tar.gz')
+          with tarfile.open(archive) as source:
+              member, = [m for m in source.getmembers() if m.name.endswith('/reproduce/drivers/gbml/extract_sra.cpp')]
+              assert source.extractfile(member).read() == Path('reproduce/drivers/gbml/extract_sra.cpp').read_bytes()
+          print('PASS: source archive includes the exact GBML181 C++ extractor')
+          PY_SOURCE
       - name: Install built wheel and test
         run: |
           for package in dist/*.whl; do

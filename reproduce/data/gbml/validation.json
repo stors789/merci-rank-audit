@@ -1,0 +1,306 @@
+{
+  "status": "STAGED_AND_INTEGRATED_FULL_INPUT_RECONSTRUCTION_PASS",
+  "candidate_version": "0.1.4",
+  "sample": "GSM7221332 / GBML181",
+  "sra_runs": [
+    "SRR24283915",
+    "SRR24283916"
+  ],
+  "upstream_commit": "79e105aaf13159bee325c3ceceb6ee679e430341",
+  "scope": "one pre-existing sample; roles are working labels, not author malignant labels or transfer truth",
+  "generation_read_historical_roles_scores_or_UMI": false,
+  "new_null_draws_or_samples": false,
+  "spot_counts": {
+    "SRR24283915": 98159746,
+    "SRR24283916": 102126028
+  },
+  "candidate_records": 640591,
+  "accepted_chrM_reads": 354109,
+  "aligned_cells": 2060,
+  "UMI_molecules": 77622,
+  "unanimous_UMI_positions": 9459145,
+  "conflicting_UMI_positions_discarded": 2588,
+  "source_and_score": {
+    "status": "COMPLETE",
+    "feature": "MT_3029_A-G",
+    "observed_and_positive": {
+      "source": {
+        "observed_cells": 15,
+        "positive_cells": 1,
+        "positive_consensus_UMIs": 1
+      },
+      "target": {
+        "observed_cells": 279,
+        "positive_cells": 4,
+        "positive_consensus_UMIs": 4
+      }
+    },
+    "odds_ratio": 4.85820334312969,
+    "p_value": 0.615650616756874,
+    "q_value": 0.999999999999999,
+    "RNA_tie_blocks": 4,
+    "RNA_cells_in_tie_blocks": 9,
+    "N": 1343,
+    "Neff_zero": 1339,
+    "Neff_zero_observable": 275,
+    "Neff_zero_unobservable": 1064
+  },
+  "score_sha256": "8c648c78e7e692412c8d8da2b5b1877c262494eb81f9e666f2ff534de7afe4e7",
+  "threshold_sha256": "8b2487498cd84a11e99acb9e1fb5fbd4731fa165b1e2ed69fe9385e3691f9f69",
+  "exact_families": {
+    "N": 1343,
+    "gate_state": "possible_not_certain",
+    "original_gate_pass": false,
+    "raw_core": 3,
+    "raw_union": 672,
+    "default_core": 0,
+    "default_union": 672,
+    "passing_core": 3,
+    "passing_union": 672
+  },
+  "comparison_checks": {
+    "fixed_roles": {
+      "passed": true,
+      "old_sha256": "be6cef0f6a92c33f5b37c95b13a338f04bd3573f1fb9a2d98eeaf5170d08bcf0",
+      "new_sha256": "be6cef0f6a92c33f5b37c95b13a338f04bd3573f1fb9a2d98eeaf5170d08bcf0"
+    },
+    "RNA_QC_membership": {
+      "passed": true,
+      "scope": "decompressed rows, ordered barcodes and clusters"
+    },
+    "reference_kmers": {
+      "passed": true,
+      "old_sha256": "273802969af3ec0bfa90a9595924c0da9444903f48088b808e3154d7838e4fbb",
+      "new_sha256": "273802969af3ec0bfa90a9595924c0da9444903f48088b808e3154d7838e4fbb"
+    },
+    "SRA_full_run_counters": {
+      "passed": true,
+      "runs": 2,
+      "spot_total": 200285774
+    },
+    "candidate_bytes": {
+      "passed": true,
+      "old_sha256": "9a7fb34976790d1696b25d47c86983bdf793fd919d76e60ce3eb15c49d05a475",
+      "new_sha256": "9a7fb34976790d1696b25d47c86983bdf793fd919d76e60ce3eb15c49d05a475",
+      "candidate_count": 640591
+    },
+    "alignment_filter_totals": {
+      "passed": true,
+      "old_accepted": 354109,
+      "new_accepted": 354109
+    },
+    "accepted_reads_per_cell": {
+      "passed": true,
+      "old_cells": 2060,
+      "new_cells": 2060
+    },
+    "accepted_BAM_records": {
+      "passed": true,
+      "old_records": 354109,
+      "new_records": 354109,
+      "different_records": 0,
+      "old_sha256": "2fa39f5d06a2f5c976ab7e3dc4c06b9760e35998f394410b9b39c025d853d949",
+      "new_sha256": "2fa39f5d06a2f5c976ab7e3dc4c06b9760e35998f394410b9b39c025d853d949",
+      "comparison": "full SAM fields and CB/UB tags by unique query, independent of BAM serialization/order"
+    },
+    "joint_UMI_consensus": {
+      "passed": true,
+      "old_shape": [
+        2060,
+        132552
+      ],
+      "new_shape": [
+        2060,
+        132552
+      ],
+      "different_entries": 0,
+      "old_sha256": "23aed7599c268746f45da81c1724303ad3fc5730cc025123c98f77f8d42a70dd",
+      "new_sha256": "23aed7599c268746f45da81c1724303ad3fc5730cc025123c98f77f8d42a70dd"
+    },
+    "consensus_denominators": {
+      "passed": true,
+      "molecules": 77622,
+      "UMI_positions": 9459145,
+      "counts": {
+        "primary_chrM": 354109,
+        "accepted_chrM_alignments": 354109,
+        "conflicting_UMI_position_discarded": 2588
+      }
+    },
+    "variants_MT_variants.tsv": {
+      "passed": true,
+      "old_sha256": "768af9cf95f1edcbc8ba707facd5ebc8f08a13c6488f6aa378beac423c48659d",
+      "new_sha256": "768af9cf95f1edcbc8ba707facd5ebc8f08a13c6488f6aa378beac423c48659d"
+    },
+    "variants_donors.txt": {
+      "passed": true,
+      "old_sha256": "32bf3fbb4a9cd05fc7da0c90179aa162c0d701a1ee8776fdb3a7fba2e78a8fb9",
+      "new_sha256": "32bf3fbb4a9cd05fc7da0c90179aa162c0d701a1ee8776fdb3a7fba2e78a8fb9"
+    },
+    "variants_targets.txt": {
+      "passed": true,
+      "old_sha256": "ff8479b9b5901c00781e8704fb2ccb4d13d25db0a2d01f846cf69d2d4e46825a",
+      "new_sha256": "ff8479b9b5901c00781e8704fb2ccb4d13d25db0a2d01f846cf69d2d4e46825a"
+    },
+    "coverage_values_and_order": {
+      "passed": true,
+      "old_sha256": "462f003c1623a81b58ac4eeba56603977901b7c2ce3cd89b62276100fca8ec3c",
+      "new_sha256": "654073576a6c74e06d03ffb4b51d8efd7d1738c656e33f7e0b0ac98f61614de0"
+    },
+    "RNA_MT_expression.tsv": {
+      "passed": true,
+      "old_sha256": "cb5a2f2dd7ecd963203cf149cd26b821411a4e0f0b92317f34a135791fa5f399",
+      "new_sha256": "cb5a2f2dd7ecd963203cf149cd26b821411a4e0f0b92317f34a135791fa5f399"
+    },
+    "RNA_MT_counts.tsv": {
+      "passed": true,
+      "old_sha256": "059834d54569b6ea20cb22f258cc1f49cfd78f7699f0e5e2ed743ab7f72099c3",
+      "new_sha256": "059834d54569b6ea20cb22f258cc1f49cfd78f7699f0e5e2ed743ab7f72099c3"
+    },
+    "RNA_RNA_totals.tsv": {
+      "passed": true,
+      "old_sha256": "3399206bfbc420bc632daccbf10bbe294ea02605da1c25ca4821123f7fa78f33",
+      "new_sha256": "3399206bfbc420bc632daccbf10bbe294ea02605da1c25ca4821123f7fa78f33"
+    },
+    "source_qualification": {
+      "passed": true,
+      "old": {
+        "frozen_donors": 108,
+        "frozen_targets": 2001,
+        "variant_records_after_minReads": 4614,
+        "donors_with_variant_record": 77,
+        "targets_with_variant_record": 1356,
+        "status": "source_features_identified",
+        "variants_before_observability": 1333,
+        "variants_after_observability": 1143,
+        "variants_with_mutated_cells_ge5": 8,
+        "source_features": 1,
+        "source_feature_ids": "MT_3029_A-G",
+        "downstream": "eligible_for_score_preparation"
+      },
+      "new": {
+        "frozen_donors": 108,
+        "frozen_targets": 2001,
+        "variant_records_after_minReads": 4614,
+        "donors_with_variant_record": 77,
+        "targets_with_variant_record": 1356,
+        "status": "source_features_identified",
+        "variants_before_observability": 1333,
+        "variants_after_observability": 1143,
+        "variants_with_mutated_cells_ge5": 8,
+        "source_features": 1,
+        "source_feature_ids": "MT_3029_A-G",
+        "downstream": "eligible_for_score_preparation"
+      }
+    },
+    "scores_score.tsv": {
+      "passed": true,
+      "old_sha256": "8c648c78e7e692412c8d8da2b5b1877c262494eb81f9e666f2ff534de7afe4e7",
+      "new_sha256": "8c648c78e7e692412c8d8da2b5b1877c262494eb81f9e666f2ff534de7afe4e7"
+    },
+    "scores_thresholds.csv": {
+      "passed": true,
+      "old_sha256": "8b2487498cd84a11e99acb9e1fb5fbd4731fa165b1e2ed69fe9385e3691f9f69",
+      "new_sha256": "8b2487498cd84a11e99acb9e1fb5fbd4731fa165b1e2ed69fe9385e3691f9f69"
+    },
+    "ten_gate_counts": {
+      "passed": true,
+      "rows": 10
+    },
+    "raw_and_conditional_members": {
+      "passed": true,
+      "rows": 1343,
+      "ordered_IDs_equal": true,
+      "fields_equal": {
+        "raw_core": true,
+        "raw_union": true,
+        "can_select": true,
+        "can_omit": true,
+        "conditioned_core": true,
+        "conditioned_union": true
+      }
+    },
+    "three_family_aggregate": {
+      "passed": true,
+      "gate_state": "possible_not_certain",
+      "original_gate_pass": false,
+      "raw_core": 3,
+      "raw_union": 672,
+      "default_core": 0,
+      "default_union": 672,
+      "passing_core": 3,
+      "passing_union": 672
+    }
+  },
+  "qualification_fields": {
+    "matrix": true,
+    "variants": true,
+    "coverage": true,
+    "donors": true,
+    "targets": true,
+    "features": true
+  },
+  "gzip_serialization_differences": {
+    "RNA_QC_membership": {
+      "old_sha256": "5fea10af328f23b9b9d421fccad3f9565e9911bc7fb72f8a6139ca14f269025c",
+      "new_sha256": "7280a3f6c7e9b0f7d78b91d281cefb7814fea44403bd4a544e72515c9392882d",
+      "first_differing_byte_zero_based": 4,
+      "old_gzip_mtime": 1793159109,
+      "new_gzip_mtime": 1793268997,
+      "all_other_bytes_equal": true,
+      "decompressed_content_sha256": "b2754c70e27eb45b7286cfcfa944b19c19ac0b5d301182cb1e1054a688d7156d",
+      "decompressed_values_and_order_identical": true,
+      "rewritten_to_match_or_resigned": false
+    },
+    "coverage": {
+      "old_sha256": "462f003c1623a81b58ac4eeba56603977901b7c2ce3cd89b62276100fca8ec3c",
+      "new_sha256": "654073576a6c74e06d03ffb4b51d8efd7d1738c656e33f7e0b0ac98f61614de0",
+      "first_differing_byte_zero_based": 4,
+      "old_gzip_mtime": 1793163026,
+      "new_gzip_mtime": 1793270410,
+      "all_other_bytes_equal": true,
+      "decompressed_content_sha256": "cebd4568fecb754837bf684cdf112b3bfa23ab3cfa9a3025e2a481613ceb948f",
+      "decompressed_values_and_order_identical": true,
+      "rewritten_to_match_or_resigned": false
+    }
+  },
+  "other_patients_or_nuclear_model_run": false,
+  "integrated_workflow": {
+    "status": "PASS",
+    "elapsed": "18:31.28",
+    "peak_rss_KiB": 3259900,
+    "swaps_reported": 0,
+    "seconds_by_stage": {
+      "roles": 13.338,
+      "reference": 12.415,
+      "extraction": 261.089,
+      "alignment": 755.739,
+      "consensus": 11.624,
+      "variants": 3.309,
+      "expression": 3.039,
+      "qualification": 1.372,
+      "scores": 2.113,
+      "summary": 0.411,
+      "audit": 0.715
+    },
+    "historical_comparison_count": 23,
+    "historical_comparison_failures": [],
+    "qualification_fields": {
+      "matrix": true,
+      "variants": true,
+      "coverage": true,
+      "donors": true,
+      "targets": true,
+      "features": true
+    },
+    "score_sha256": "8c648c78e7e692412c8d8da2b5b1877c262494eb81f9e666f2ff534de7afe4e7",
+    "threshold_sha256": "8b2487498cd84a11e99acb9e1fb5fbd4731fa165b1e2ed69fe9385e3691f9f69",
+    "raw_bam_sha256": "2fa39f5d06a2f5c976ab7e3dc4c06b9760e35998f394410b9b39c025d853d949",
+    "e2e_used_initial_sdist_missing_own_cpp_but_existing_binary_was_compiled_from_same_project_source": true
+  },
+  "fixed_threshold_guard": {
+    "changed_table_rejected_before_output": true,
+    "R_score_changed_maximum_rejected_without_score": true,
+    "guarded_score_threshold_and_members_equal": true
+  }
+}

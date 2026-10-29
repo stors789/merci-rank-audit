@@ -8,11 +8,11 @@ physical mitochondrial transfer.
 
 [Source code](https://github.com/stors789/merci-rank-audit) · [Versioned releases](https://github.com/stors789/merci-rank-audit/releases)
 
-Install the release wheel in an isolated Python environment; fixed versions and
-distribution assets are available on the release page.
+Install a wheel in an isolated Python environment. The source version is 0.1.4.
+Download built distributions from the repository release page.
 
 ```sh
-python -m pip install merci_rank_audit-0.1.3-py3-none-any.whl
+python -m pip install merci_rank_audit-0.1.4-py3-none-any.whl
 merci-rank-audit init-example --output ./example
 merci-rank-audit audit --manifest ./example/manifest.json --output ./exact
 merci-rank-audit audit --manifest ./example/manifest.json --output ./sampled --sample both

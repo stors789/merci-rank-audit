@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.4 (candidate)
+
+- Add an explicit GBML181 reconstruction workflow from its public matrix and
+  native SRA inputs, subject to the documented reference and upstream licenses.
+
 ## 0.1.3
 
 - Add B1/B2 six-case input generation from explicitly supplied processed files,
