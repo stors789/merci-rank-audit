@@ -1,0 +1,349 @@
+{
+  "status": "PORTABLE_ADAPTATION; original input digests, seeds, and scenario definitions",
+  "preparation_baseline": "2a625f00719e48d94359b59d3fe34ee9bd2cf918",
+  "main_accepted_preparation": "49eb43799727092a1c97f79be22d3e5784cd9841",
+  "preflight_sha256": "687cb2117c403d3c84b7bb374daf56713ae2f6ff4a7e0be7250cf60a0acc2201",
+  "master_seed": 1573,
+  "namespace": 6006,
+  "seed_derivation": "SeedSequence(1573, spawn_key=(6006,case_index,kind,index)); kinds 1=R null, 2=conditional",
+  "retrospective": true,
+  "case_order": [
+    "P2",
+    "GBML181"
+  ],
+  "rna_order": "original first; remaining lexicographic tied-block permutations in canonical ID order",
+  "threshold_order": [
+    "original",
+    "null_01",
+    "null_02",
+    "null_03",
+    "null_04",
+    "null_05",
+    "null_06",
+    "null_07",
+    "null_08",
+    "null_09",
+    "null_10"
+  ],
+  "witness_rule": "first nonbaseline substantive gate/call/family change in fixed case, RNA, threshold, canonical-ID order",
+  "G_impossible_conditional_family": "NA",
+  "null_pairs_per_cutoff": 10000,
+  "cutoffs": [
+    100,
+    90,
+    80,
+    70,
+    60,
+    50,
+    40,
+    30,
+    20,
+    10
+  ],
+  "conditional_proposals": 10000,
+  "planned_null_tables": 20,
+  "planned_scenarios": 539,
+  "planned_rarity_streams": 22,
+  "null_script": "scripts/merci_bio04_cohort_composition_20261029/nulls.R",
+  "cases": [
+    {
+      "name": "P2",
+      "N": 3265,
+      "score": "../user_data/P2_score.tsv",
+      "thresholds": "../user_data/P2_thresholds.csv",
+      "score_sha256": "79e8e81af7024bcb6d1483f5da4d729abd717ab49fbc511b09a97b77e25f9b0f",
+      "threshold_sha256": "bdc27061cc7c1ae2969b5c84df69078f0ab377734e976f302caab11273f8d830",
+      "canonical_ID_sha256": "d5039402de4dfafb5102161d5170e29930e7c26b03741704e2021be7d827742b",
+      "original_null_seed": 20261047,
+      "rna_orders": 1,
+      "rna_ties": {
+        "tied_blocks": 2,
+        "cells_in_tied_blocks": 5,
+        "block_sizes": [
+          2,
+          3
+        ],
+        "rank_intervals": [
+          [
+            509,
+            510
+          ],
+          [
+            2199,
+            2201
+          ]
+        ],
+        "legal_permutations": 12
+      },
+      "nulls": [
+        {
+          "id": "null_01",
+          "seed": 1947470176
+        },
+        {
+          "id": "null_02",
+          "seed": 2117546452
+        },
+        {
+          "id": "null_03",
+          "seed": 2063411131
+        },
+        {
+          "id": "null_04",
+          "seed": 1218621401
+        },
+        {
+          "id": "null_05",
+          "seed": 344427838
+        },
+        {
+          "id": "null_06",
+          "seed": 1079169615
+        },
+        {
+          "id": "null_07",
+          "seed": 542699048
+        },
+        {
+          "id": "null_08",
+          "seed": 808733035
+        },
+        {
+          "id": "null_09",
+          "seed": 608035682
+        },
+        {
+          "id": "null_10",
+          "seed": 1415371076
+        }
+      ],
+      "sampling": [
+        {
+          "id": "original",
+          "seed": 16303627674936797079
+        },
+        {
+          "id": "null_01",
+          "seed": 5842890087540009009
+        },
+        {
+          "id": "null_02",
+          "seed": 2470641579836730124
+        },
+        {
+          "id": "null_03",
+          "seed": 15761316289468677816
+        },
+        {
+          "id": "null_04",
+          "seed": 2986504190308482731
+        },
+        {
+          "id": "null_05",
+          "seed": 16765736105972652965
+        },
+        {
+          "id": "null_06",
+          "seed": 14285929807649473296
+        },
+        {
+          "id": "null_07",
+          "seed": 9917429196628696489
+        },
+        {
+          "id": "null_08",
+          "seed": 7613859464915325706
+        },
+        {
+          "id": "null_09",
+          "seed": 12403964712115559464
+        },
+        {
+          "id": "null_10",
+          "seed": 3130690757045543631
+        }
+      ],
+      "baseline_expected": {
+        "original_gate": false,
+        "original_counts": [
+          3265,
+          2643,
+          2082,
+          1600,
+          1182,
+          812,
+          533,
+          306,
+          142,
+          37
+        ],
+        "raw_core_union": [
+          412,
+          1633
+        ]
+      }
+    },
+    {
+      "name": "GBML181",
+      "N": 1343,
+      "score": "../user_data/GBML181_score.tsv",
+      "thresholds": "../user_data/GBML181_thresholds.csv",
+      "score_sha256": "8c648c78e7e692412c8d8da2b5b1877c262494eb81f9e666f2ff534de7afe4e7",
+      "threshold_sha256": "8b2487498cd84a11e99acb9e1fb5fbd4731fa165b1e2ed69fe9385e3691f9f69",
+      "canonical_ID_sha256": "14ce8f13577941c752148f154e92a1e349fd02fa08c079212bde2f652df5605c",
+      "original_null_seed": 20261028,
+      "rna_orders": 48,
+      "rna_ties": {
+        "tied_blocks": 4,
+        "cells_in_tied_blocks": 9,
+        "block_sizes": [
+          2,
+          2,
+          3,
+          2
+        ],
+        "rank_intervals": [
+          [
+            13,
+            14
+          ],
+          [
+            133,
+            134
+          ],
+          [
+            571,
+            573
+          ],
+          [
+            1191,
+            1192
+          ]
+        ],
+        "legal_permutations": 48
+      },
+      "nulls": [
+        {
+          "id": "null_01",
+          "seed": 1478459712
+        },
+        {
+          "id": "null_02",
+          "seed": 1982410925
+        },
+        {
+          "id": "null_03",
+          "seed": 1574869323
+        },
+        {
+          "id": "null_04",
+          "seed": 1630680744
+        },
+        {
+          "id": "null_05",
+          "seed": 1349925436
+        },
+        {
+          "id": "null_06",
+          "seed": 1857199648
+        },
+        {
+          "id": "null_07",
+          "seed": 856233976
+        },
+        {
+          "id": "null_08",
+          "seed": 495074414
+        },
+        {
+          "id": "null_09",
+          "seed": 828917764
+        },
+        {
+          "id": "null_10",
+          "seed": 447182956
+        }
+      ],
+      "sampling": [
+        {
+          "id": "original",
+          "seed": 1194110872127528637
+        },
+        {
+          "id": "null_01",
+          "seed": 6576788204311511228
+        },
+        {
+          "id": "null_02",
+          "seed": 6030448178408145389
+        },
+        {
+          "id": "null_03",
+          "seed": 9361249697839774797
+        },
+        {
+          "id": "null_04",
+          "seed": 9658523886352851449
+        },
+        {
+          "id": "null_05",
+          "seed": 5904778112460065505
+        },
+        {
+          "id": "null_06",
+          "seed": 16128344215119774076
+        },
+        {
+          "id": "null_07",
+          "seed": 11660525464793493686
+        },
+        {
+          "id": "null_08",
+          "seed": 15168503605881441351
+        },
+        {
+          "id": "null_09",
+          "seed": 17680293194957875576
+        },
+        {
+          "id": "null_10",
+          "seed": 13389668711365896573
+        }
+      ],
+      "baseline_expected": {
+        "original_gate": false,
+        "original_counts": [
+          1343,
+          1087,
+          849,
+          658,
+          478,
+          330,
+          201,
+          110,
+          57,
+          16
+        ],
+        "raw_core_union": [
+          3,
+          672
+        ]
+      }
+    }
+  ],
+  "frozen_code_sha256": {
+    "scripts/merci_bio06_fixed_input_sensitivity_20261029/common.py": "734088459dd063c9ae9e76d18a02d3a8188246611c8bf9584b4d89ca8aac91e8",
+    "scripts/merci_bio06_fixed_input_sensitivity_20261029/preflight.py": "964468692bd7d051bda2d7b728b381b0f0b6d03c1661652a6eec04d3e95e7d54",
+    "scripts/merci_bio06_fixed_input_sensitivity_20261029/freeze.py": "c7d6ab23451b83e8d2736a76492810143259dcba4f051b172580875e2cd77009",
+    "scripts/merci_bio06_fixed_input_sensitivity_20261029/run_nulls.py": "49cf06ffd44e2ca281a2e2ca615c969133652a86c1cb6160760e8e0774978972",
+    "scripts/merci_bio06_fixed_input_sensitivity_20261029/run_scenarios.py": "0f55427ce32fb8c7eb190065d7e882374fc8c973bf44cc47b3de7a6ab90c233f",
+    "scripts/merci_bio06_fixed_input_sensitivity_20261029/run_rarity.py": "72e4e0d509fba0c438f994481a8676a353bbabd5027b95583a22bf44f58437af",
+    "scripts/merci_bio04_cohort_composition_20261029/nulls.R": "bca872081c974143f3513e366c38caa3757784fb4be8fee902c6e4f1d4b6f9fe",
+    "software/merci_rank_audit/src/merci_rank_audit/sampler.py": "01ff034a2d3b16564a98963bfd9f3bf016800b035bbe93deebc29d348b4e1179",
+    "software/merci_rank_audit/src/merci_rank_audit/conditioned.py": "feeeea9d8a3c1d93b633a784f038173bfb109a41d6d8e7c153672f3d97c763d2",
+    "software/merci_rank_audit/src/merci_rank_audit/bounds.py": "df176cda27dcb65ad5ee90c01ee69cb730946a2b3e6bf8f921eb072e4f59a31f",
+    "software/merci_rank_audit/src/merci_rank_audit/core.py": "56941ddf8970525903de31f460019978e6959d53b35365295248743eb97de1ff",
+    "software/merci_rank_audit/src/merci_rank_audit/analytic.py": "4610bc3c9ce89c59e61173d5d78da66d1bfd81c2cf14ce32ae9e4571ce7ceb3a"
+  },
+  "all_thresholds": "../data/bio06/all_thresholds.csv"
+}

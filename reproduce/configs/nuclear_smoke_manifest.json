@@ -1,0 +1,13 @@
+{
+  "budget": 100,
+  "cases": [
+    {
+      "name": "synthetic",
+      "score": "../fixtures/nuclear/score.tsv",
+      "thresholds": "../fixtures/nuclear/certain_thresholds.csv",
+      "nuclear": "../fixtures/nuclear/nuclear.npz",
+      "seed_uniform": 21,
+      "seed_conditional": 22
+    }
+  ]
+}

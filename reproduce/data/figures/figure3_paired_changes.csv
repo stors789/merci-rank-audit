@@ -1,0 +1,7 @@
+stage,method,target,original_gate,baseline,metric,planned,defined,minimum,q25,median,q75,maximum
+development_reused,original_regular,mixed,True,original_default,precision_delta,20,20,0.0014976900941813254,0.0048880737794818885,0.0066265454192662721,0.008065423036589886,0.013368944702361607
+development_reused,original_regular,mixed,True,original_default,sensitivity_delta,20,20,-0.019283746556473802,-0.013515840220385711,-0.010847107438016534,-0.0088670798898071168,-0.0044765840220386544
+frozen_evaluation,original_regular,mixed,True,original_default,precision_delta,80,80,0,0.0039034430618319627,0.0060425360054814359,0.0084844936642375912,0.015263772040521983
+frozen_evaluation,original_regular,mixed,True,original_default,sensitivity_delta,80,80,-0.02789256198347112,-0.01386019283746559,-0.010502754820936655,-0.0086088154269972073,0
+retrospective_second_experiment,original_regular,mixed,True,original_default,precision_delta,20,20,-0.00070612389004875986,0.010155376273851935,0.018120477606215712,0.021737487448705572,0.036590257211482458
+retrospective_second_experiment,original_regular,mixed,True,original_default,sensitivity_delta,20,20,-0.052997393570808016,-0.038227628149435269,-0.022589052997393555,-0.01650738488271071,-0.0017376194613379914

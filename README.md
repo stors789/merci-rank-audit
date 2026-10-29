@@ -11,7 +11,7 @@ physical mitochondrial transfer.
 Install the release wheel in an isolated Python environment:
 
 ```sh
-python -m pip install merci_rank_audit-0.1.0-py3-none-any.whl
+python -m pip install merci_rank_audit-0.1.1-py3-none-any.whl
 merci-rank-audit init-example --output ./example
 merci-rank-audit audit --manifest ./example/manifest.json --output ./exact
 merci-rank-audit audit --manifest ./example/manifest.json --output ./sampled --sample both
@@ -95,8 +95,13 @@ The source archive contains the tests and synthetic inputs under
 `src/merci_rank_audit/examples/`. The release also supplies a separate
 synthetic-test-data ZIP and SHA256 checksums. Bench2 input acquisition and R
 requirements are described in [the reproduction guide](docs/bench2.md).
-GitHub Actions runs the same tests on a standard Linux runner.
+GitHub Actions builds and installs the wheel, runs the same tests, checks four
+analysis drivers and redraws all ten main and supplementary figures on a standard
+Linux runner.
 
 The implementation was tested with Python 3.13. Results describe fixed-score
 ranking families and the specified tie mechanism. Nuclear Monte Carlo intervals
 and experimental annotations retain their stated scopes.
+
+
+The source distribution includes the portable [reproduction materials](reproduce/README.md). The wheel contains the library and synthetic quickstart; the expanded analyses and aggregate plots are in the source distribution.

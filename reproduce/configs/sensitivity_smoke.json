@@ -1,0 +1,30 @@
+{
+  "status": "synthetic only; first frozen P2 sampler seeds, 100 proposals",
+  "cases": [
+    {
+      "name": "fixture",
+      "N": 20,
+      "score": "../fixtures/sensitivity/score.tsv",
+      "thresholds": "../fixtures/sensitivity/thresholds.csv",
+      "rna_orders": 2,
+      "nulls": [
+        {
+          "id": "null_01",
+          "seed": 1947470176
+        }
+      ],
+      "sampling": [
+        {
+          "id": "original",
+          "seed": 16303627674936797079
+        },
+        {
+          "id": "null_01",
+          "seed": 5842890087540009009
+        }
+      ]
+    }
+  ],
+  "all_thresholds": "../fixtures/sensitivity/all_thresholds.csv",
+  "conditional_proposals": 100
+}

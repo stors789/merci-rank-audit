@@ -1,0 +1,9 @@
+stage,design,from_level,to_level,group,channel,metric,planned,defined,minimum,q25,median,q75,maximum
+frozen_evaluation,fixedN,0,100,reference,DNA_only,raw_core_to_outside,80,80,99,113.75,123.5,134,161
+frozen_evaluation,fixedN,0,100,reference,RNA_only,raw_core_to_outside,80,80,63,73.75,78.5,85,100
+frozen_evaluation,fixedN,0,100,reference,both,raw_core_to_outside,80,80,78,95.75,104,114,133
+frozen_evaluation,fixedN,0,100,reference,unchanged,raw_core_to_outside,80,80,0,0,0,0,0
+retrospective_second_experiment,fixedN,0,100,reference,DNA_only,raw_core_to_outside,20,20,0,0,0,23.25,32
+retrospective_second_experiment,fixedN,0,100,reference,RNA_only,raw_core_to_outside,20,20,24,28,33,38.25,41
+retrospective_second_experiment,fixedN,0,100,reference,both,raw_core_to_outside,20,20,3,10.75,11,15.25,23
+retrospective_second_experiment,fixedN,0,100,reference,unchanged,raw_core_to_outside,20,20,0,0,0,0,0

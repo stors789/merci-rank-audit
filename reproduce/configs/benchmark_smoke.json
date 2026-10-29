@@ -1,0 +1,141 @@
+{
+  "status": "SYNTHETIC_ENGINEERING_SMOKE; original seed, 100-proposal prefix",
+  "created_at": "2026-10-28T20:48:45.723901+08:00",
+  "base_main": "dabeb1a284cd42973d0ef4b2039a63c831e1950b",
+  "code_commit": "portable-adaptation-of-47cd61f88ba0942ae47b3ea75b320474826af7e7",
+  "main_seed": 1573,
+  "seed_method": "BIO-01 fixed synthetic/three real child streams; extra real streams SeedSequence(1573,spawn_key=(3003,...))",
+  "cases": [
+    {
+      "case": "formal_n100_tie50_single50_rare_target",
+      "N": 100,
+      "boundary_tie_fraction": 0.5,
+      "gate_template": "rare_target",
+      "design": "single50",
+      "input_seed": 14913981491227269026,
+      "reference_seed": 1620200252710442362,
+      "uniform_replicate_seeds": [
+        4744565056191333950,
+        1630522852760341839,
+        5264968007304707590,
+        16140463207519781895,
+        16053261345153604205,
+        13834473395979991781,
+        7611415679038380687,
+        6222425252576767269,
+        8634118851769308171,
+        4523731907177372113,
+        16919062990146735125,
+        2625073598056884975,
+        2622528194844108389,
+        12650144503955561862,
+        12669845126194532377,
+        8497489994842055461,
+        6915959967579918754,
+        16197383141847571824,
+        14112504833205669004,
+        12900073497386373532
+      ],
+      "conditional_replicate_seeds": [
+        16863351594628244822,
+        12288336177750444824,
+        12388725240288254204,
+        12577918836775969899,
+        10430574817666584137,
+        16898609902814788764,
+        4340161634095939472,
+        12300284047424327065,
+        17382424955992374990,
+        15391759074190095144,
+        11428096107848419263,
+        12244450885865701152,
+        1723468011343803924,
+        9806144878920149941,
+        1485066803707993337,
+        12045459301569053793,
+        4182599606016289941,
+        1766865076665065836,
+        9819773095773266798,
+        8842418439187013517
+      ],
+      "scope": "synthetic",
+      "structure": {
+        "boundary_size": 50,
+        "boundary_slots": 25,
+        "strict_high": 26,
+        "boundary_RNA_top": 23,
+        "strict_intersection": 19,
+        "feasible_overlap": [
+          19,
+          42
+        ],
+        "degenerate_boundary_overlap": false,
+        "input_sha256": "cab382004eb41ee697b0369bc2cc99cb9c966872bc6df771d12b3f3079cb939b"
+      },
+      "prepared_input": "../fixtures/benchmark/formal_n100_tie50_single50_rare_target.npz",
+      "prepared_sha256": "34a4a2bd9f6517bc0afe062b0c4775519f12b59d77409bbe8c0f276352c96141",
+      "canonical_array_sha256": "8bba6de76d3c04f496e505499dba02bac0c89c560f131e75b135370e27c943f1",
+      "maxima": [
+        100,
+        91,
+        81,
+        71,
+        61,
+        37,
+        41,
+        31,
+        21,
+        11
+      ]
+    }
+  ],
+  "replicates": 1,
+  "proposal_prefixes": [
+    100
+  ],
+  "wall_checkpoints_seconds": [
+    0.01
+  ],
+  "per_flow_max_seconds": 5,
+  "flow_stop": "Finish when both 20000 proposals and 10 seconds are reached; otherwise stop at 60 seconds, preserve reached checkpoints.",
+  "time_contract": "Checkpoint after first completed proposal at or beyond target, include draw/gate/member accumulator and previous checkpoint processing. Record actual time/count; shared conditional flow computes weighted and accepted jointly. Uniform/conditional order alternates by replicate on one worker/core. Cold process+input+sampler prep separately, plus actual wall since spawn, which includes preceding flows/replicates.",
+  "deterministic_shortcut": "If G impossible or no Neff ties, report exact structural state with zero actual proposals and explicit shortcut status for each requested checkpoint; conditional members are NA if G impossible.",
+  "member_domain": "All raw possible members, fixed before sampling; zero uniform gate hits means member estimate and RMSE NA, never zero.",
+  "time_to_error": {
+    "member_RMSE_thresholds": [
+      0.05,
+      0.02,
+      0.01
+    ],
+    "gate_absolute_error_thresholds": [
+      0.001,
+      0.0001,
+      1e-05
+    ],
+    "gate_relative_threshold": "absolute error <= max(1e-6,0.1*reference_P_G)",
+    "rule": "First observed qualifying checkpoint, no interpolation. Unqualified reference, undefined estimate or unreached target remains NA."
+  },
+  "reference": {
+    "exact": "Independent finite hypergeometric analysis for impossible/certain/one possible event; verified on sealed small-N truth.",
+    "multi_proposals": 200000,
+    "multi_wall_limit_seconds": 1800,
+    "minimum_accepted": 10000,
+    "max_marginal_wilson_95_halfwidth": 0.01,
+    "gate_95_halfwidth": "<=max(1e-5,0.1*estimated_P_G)",
+    "count_quantile": "For multi-gate reference, empirical 2.5/50/97.5% count quantile 95% order-statistic interval width <= max(1,5% of independent raw count range), assessed separately from member and gate qualification.",
+    "failure": "Retain incomplete/precision-failed status; no member RMSE or gate absolute error against an unqualified reference.",
+    "independence": "Independent seed does not eliminate shared sampler implementation error; N8 calibration retained."
+  },
+  "deadline": {
+    "compute_stop_CST": "2099-01-01T00:00:00+00:00"
+  },
+  "exclusions": [
+    "No N100000 probability sampling",
+    "No new scoring or patients",
+    "No P2 beta or nuclear programme",
+    "No formal external publication"
+  ],
+  "planned_status": "Not yet run; each reference and each replicate/flow has an independent completion record",
+  "portability_note": "Existing first replicate seeds and original synthetic input; reduced checks only.",
+  "historical_code_commit": "47cd61f88ba0942ae47b3ea75b320474826af7e7"
+}

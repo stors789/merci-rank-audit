@@ -1,0 +1,5 @@
+representation,feature,accepted,valid,invalid,negative,zero,positive,minimum,maximum,scope
+original,HALLMARK_MTORC1_SIGNALING,196549,196549,0,1,0,196548,-0.00015400050557571601,0.033612217506418726,Post-result count in fixed conditional ordering reference; not biological frequency.
+original,HALLMARK_PROTEIN_SECRETION,196549,196549,0,0,0,196549,0.0011108493357871924,0.042940645422974634,Post-result count in fixed conditional ordering reference; not biological frequency.
+alternative,HALLMARK_MTORC1_SIGNALING,196549,196549,0,0,0,196549,0.00023435656182933654,0.0073148228393578206,Post-result count in fixed conditional ordering reference; not biological frequency.
+alternative,HALLMARK_PROTEIN_SECRETION,196549,196549,0,4,0,196545,-0.0001384735973255557,0.0092418608165742606,Post-result count in fixed conditional ordering reference; not biological frequency.

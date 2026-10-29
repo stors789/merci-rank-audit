@@ -5,4 +5,4 @@ from .inputs import validate_manifest
 from .sampler import GateSampler
 
 __all__ = ["GateSampler", "analytic", "evaluate", "solve", "validate_manifest"]
-__version__ = "0.1.0"
+__version__ = "0.1.1"

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "merci-rank-audit"
-version = "0.1.0"
+version = "0.1.1"
 description = "Fixed-score MERCI ranking, gate, and conditional-family audit"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -19,6 +19,7 @@ Issues = "https://github.com/stors789/merci-rank-audit/issues"
 
 [project.optional-dependencies]
 test = ["pytest>=8,<10"]
+reproduce = ["matplotlib>=3.8,<4", "pypdf>=4,<7", "reportlab>=4,<5"]
 
 [project.scripts]
 merci-rank-audit = "merci_rank_audit.cli:main"

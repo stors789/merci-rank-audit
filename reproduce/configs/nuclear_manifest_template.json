@@ -1,0 +1,13 @@
+{
+  "budget": 200000,
+  "cases": [
+    {
+      "name": "P2",
+      "score": "../user_data/P2_score.tsv",
+      "thresholds": "../user_data/P2_thresholds.csv",
+      "nuclear": "../user_data/P2_nuclear.npz",
+      "seed_uniform": 0,
+      "seed_conditional": 0
+    }
+  ]
+}

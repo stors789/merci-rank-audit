@@ -1,0 +1,37 @@
+{
+  "status": "deterministic synthetic fixture, not biological research",
+  "null_maxima": "../fixtures/cohort/null_maxima.csv",
+  "cases": [
+    {
+      "experiment": "fixture",
+      "stage": "synthetic",
+      "split": 1,
+      "case": "synthetic_mixed",
+      "source": "../fixtures/cohort/synthetic.npz",
+      "maxima": [
+        20,
+        0,
+        17,
+        15,
+        13,
+        11,
+        9,
+        7,
+        5,
+        3
+      ]
+    }
+  ],
+  "splits": [
+    {
+      "experiment": "fixture",
+      "stage": "synthetic",
+      "split": 1,
+      "prepared": "../fixtures/cohort/synthetic.npz",
+      "M": 12,
+      "CC_available": 8,
+      "anchor_N": 6,
+      "background_slots": 6
+    }
+  ]
+}
