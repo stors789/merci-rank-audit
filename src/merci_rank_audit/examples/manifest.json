@@ -1,0 +1,21 @@
+{
+  "budget": 1000,
+  "cases": [
+    {
+      "name": "synthetic_certain",
+      "score": "score.tsv",
+      "thresholds": "certain_thresholds.csv",
+      "nuclear": "nuclear.npz",
+      "seed_uniform": 21,
+      "seed_conditional": 22
+    },
+    {
+      "name": "synthetic_impossible",
+      "score": "score.tsv",
+      "thresholds": "impossible_thresholds.csv",
+      "nuclear": "nuclear.npz",
+      "seed_uniform": 21,
+      "seed_conditional": 22
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "merci-rank-audit"
+version = "0.1.0"
+description = "Fixed-score MERCI ranking, gate, and conditional-family audit"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = ["numpy>=1.26,<3", "pandas>=2.1,<4", "scipy>=1.12,<2"]
+
+[project.urls]
+Homepage = "https://github.com/stors789/merci-rank-audit"
+Repository = "https://github.com/stors789/merci-rank-audit"
+Documentation = "https://github.com/stors789/merci-rank-audit#readme"
+Issues = "https://github.com/stors789/merci-rank-audit/issues"
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+merci-rank-audit = "merci_rank_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+merci_rank_audit = ["examples/*.tsv", "examples/*.csv", "examples/*.json", "examples/*.npz", "r_helpers/*.R"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
