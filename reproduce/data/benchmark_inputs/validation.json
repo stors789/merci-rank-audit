@@ -1,0 +1,785 @@
+{
+  "status": "LOCAL_FULL_INPUT_COMPARISONS_PASSED",
+  "candidate_version": "0.1.3",
+  "upstream_commit": "79e105aaf13159bee325c3ceceb6ee679e430341",
+  "executed_splits": 2,
+  "static_case_selectors_checked": 720,
+  "other_splits_run": false,
+  "generation_read_historical_scores_or_members": false,
+  "numerical_core_changed": false,
+  "comparisons": {
+    "bench1": {
+      "split": 21,
+      "stage": "frozen_evaluation",
+      "roles": {
+        "donor": true,
+        "positive": true,
+        "negative": true,
+        "reference": true,
+        "test": true,
+        "seed": true,
+        "RNG": true
+      },
+      "feature_selection": {
+        "original_regular_mixed": {
+          "equal": true,
+          "feature_indices_equal": true,
+          "features_new": 2025,
+          "features_old": 2025,
+          "tested_new": 21442,
+          "tested_old": 21442
+        },
+        "original_regular_negative": {
+          "equal": true,
+          "feature_indices_equal": true,
+          "features_new": 2080,
+          "features_old": 2080,
+          "tested_new": 18167,
+          "tested_old": 18167
+        },
+        "original_loo_mixed": {
+          "equal": true,
+          "feature_indices_equal": true,
+          "features_new": 1572,
+          "features_old": 1572,
+          "tested_new": 19584,
+          "tested_old": 19584
+        },
+        "original_loo_negative": {
+          "equal": true,
+          "feature_indices_equal": true,
+          "features_new": 2138,
+          "features_old": 2138,
+          "tested_new": 14651,
+          "tested_old": 14651
+        },
+        "strict_regular_mixed": {
+          "equal": true,
+          "feature_indices_equal": true,
+          "features_new": 2159,
+          "features_old": 2159,
+          "tested_new": 14524,
+          "tested_old": 14524
+        },
+        "strict_regular_negative": {
+          "equal": true,
+          "feature_indices_equal": true,
+          "features_new": 2159,
+          "features_old": 2159,
+          "tested_new": 14524,
+          "tested_old": 14524
+        }
+      },
+      "scores": {
+        "original_regular_mixed": {
+          "rows": 6690,
+          "columns": [
+            "cell",
+            "truth",
+            "Neff",
+            "DNA_rank",
+            "RNA_score",
+            "RNA_rank",
+            "observed_source_features",
+            "source_marker_observable",
+            "MT_reads",
+            "mean_MT_coverage",
+            "observed_MT_positions",
+            "nuclear_UMI",
+            "raw_top50"
+          ],
+          "old_sha256": "06ee6a0f31fbadc3e5884e75389cc83482b7067138553bd1beec0789125c91ba",
+          "new_sha256": "06ee6a0f31fbadc3e5884e75389cc83482b7067138553bd1beec0789125c91ba",
+          "byte_identical": true,
+          "values_and_order_equal": true
+        },
+        "original_regular_negative": {
+          "rows": 3786,
+          "columns": [
+            "cell",
+            "truth",
+            "Neff",
+            "DNA_rank",
+            "RNA_score",
+            "RNA_rank",
+            "observed_source_features",
+            "source_marker_observable",
+            "MT_reads",
+            "mean_MT_coverage",
+            "observed_MT_positions",
+            "nuclear_UMI",
+            "raw_top50"
+          ],
+          "old_sha256": "e583945b1787eda7c5da531bf3e62855d7469a5c38b9b0d41ae1662525a91d85",
+          "new_sha256": "e583945b1787eda7c5da531bf3e62855d7469a5c38b9b0d41ae1662525a91d85",
+          "byte_identical": true,
+          "values_and_order_equal": true
+        },
+        "original_loo_mixed": {
+          "rows": 6690,
+          "columns": [
+            "cell",
+            "truth",
+            "Neff",
+            "DNA_rank",
+            "RNA_score",
+            "RNA_rank",
+            "observed_source_features",
+            "source_marker_observable",
+            "MT_reads",
+            "mean_MT_coverage",
+            "observed_MT_positions",
+            "nuclear_UMI",
+            "raw_top50"
+          ],
+          "old_sha256": "8e0362cbca4a57dce3a182062d719310cc8940e7de398a40495618d7cb858c72",
+          "new_sha256": "8e0362cbca4a57dce3a182062d719310cc8940e7de398a40495618d7cb858c72",
+          "byte_identical": true,
+          "values_and_order_equal": true
+        },
+        "original_loo_negative": {
+          "rows": 3786,
+          "columns": [
+            "cell",
+            "truth",
+            "Neff",
+            "DNA_rank",
+            "RNA_score",
+            "RNA_rank",
+            "observed_source_features",
+            "source_marker_observable",
+            "MT_reads",
+            "mean_MT_coverage",
+            "observed_MT_positions",
+            "nuclear_UMI",
+            "raw_top50"
+          ],
+          "old_sha256": "029a0e109945cf1e75450b3c379db4c5d3434a077b16ccc78f5da7ba58ffe899",
+          "new_sha256": "029a0e109945cf1e75450b3c379db4c5d3434a077b16ccc78f5da7ba58ffe899",
+          "byte_identical": true,
+          "values_and_order_equal": true
+        },
+        "strict_regular_mixed": {
+          "rows": 6690,
+          "columns": [
+            "cell",
+            "truth",
+            "Neff",
+            "DNA_rank",
+            "RNA_score",
+            "RNA_rank",
+            "observed_source_features",
+            "source_marker_observable",
+            "MT_reads",
+            "mean_MT_coverage",
+            "observed_MT_positions",
+            "nuclear_UMI",
+            "raw_top50"
+          ],
+          "old_sha256": "fffc9e9cd36782b68b1831a12f2dad8d4f17d69a93658c8aac55b6b27f521998",
+          "new_sha256": "fffc9e9cd36782b68b1831a12f2dad8d4f17d69a93658c8aac55b6b27f521998",
+          "byte_identical": true,
+          "values_and_order_equal": true
+        },
+        "strict_regular_negative": {
+          "rows": 3786,
+          "columns": [
+            "cell",
+            "truth",
+            "Neff",
+            "DNA_rank",
+            "RNA_score",
+            "RNA_rank",
+            "observed_source_features",
+            "source_marker_observable",
+            "MT_reads",
+            "mean_MT_coverage",
+            "observed_MT_positions",
+            "nuclear_UMI",
+            "raw_top50"
+          ],
+          "old_sha256": "149fa1712c5019d8bd33162dbcb6d0767801527a465af5e4d633beba7c246673",
+          "new_sha256": "149fa1712c5019d8bd33162dbcb6d0767801527a465af5e4d633beba7c246673",
+          "byte_identical": true,
+          "values_and_order_equal": true
+        }
+      },
+      "prepared": {
+        "old_sha256": "dc9208e8f0562a69b26d8c4b9ea04d1d638d61d5647ad79f710fe10aad8a4ea8",
+        "new_sha256": "dc9208e8f0562a69b26d8c4b9ea04d1d638d61d5647ad79f710fe10aad8a4ea8",
+        "byte_identical": true
+      },
+      "members": [
+        {
+          "scope": "task",
+          "name": "bench1_021_original_regular_mixed.npz",
+          "old_sha256": "ef0ab8fae9b281f7814ef1a895b54c82df025677d454e95e78cac0f491aa3daa",
+          "new_sha256": "ef0ab8fae9b281f7814ef1a895b54c82df025677d454e95e78cac0f491aa3daa",
+          "byte_identical": true
+        },
+        {
+          "scope": "task",
+          "name": "bench1_021_original_regular_negative.npz",
+          "old_sha256": "d878a8f3350afd414fada830118843e00d04b1b195715daf74ccf9e045f09d7c",
+          "new_sha256": "d878a8f3350afd414fada830118843e00d04b1b195715daf74ccf9e045f09d7c",
+          "byte_identical": true
+        },
+        {
+          "scope": "task",
+          "name": "bench1_021_original_loo_mixed.npz",
+          "old_sha256": "b2d61b8f91e9c211fa84ba554890c7df8357ba3582c8e9e0e18d7dd1f3daaab4",
+          "new_sha256": "b2d61b8f91e9c211fa84ba554890c7df8357ba3582c8e9e0e18d7dd1f3daaab4",
+          "byte_identical": true
+        },
+        {
+          "scope": "task",
+          "name": "bench1_021_original_loo_negative.npz",
+          "old_sha256": "e120ad40191b5ce8cd693052c36694b39ad3bcd44ec235a39a2115eca4a51fc5",
+          "new_sha256": "e120ad40191b5ce8cd693052c36694b39ad3bcd44ec235a39a2115eca4a51fc5",
+          "byte_identical": true
+        },
+        {
+          "scope": "task",
+          "name": "bench1_021_strict_regular_mixed.npz",
+          "old_sha256": "899017026360dd660cf536ca2d117eef1448061e1ff9087d08613311376f7ba0",
+          "new_sha256": "899017026360dd660cf536ca2d117eef1448061e1ff9087d08613311376f7ba0",
+          "byte_identical": true
+        },
+        {
+          "scope": "task",
+          "name": "bench1_021_strict_regular_negative.npz",
+          "old_sha256": "5a3c1b9ad441102676e70ca6adb253c24179d0b9326dff52570d6635eb77993a",
+          "new_sha256": "5a3c1b9ad441102676e70ca6adb253c24179d0b9326dff52570d6635eb77993a",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench1_021_fixedN_000.npz",
+          "old_sha256": "bf71510fabb16cff9183d4db044f6c468d06c3005d3e1e35b5a67b74ffdd7253",
+          "new_sha256": "bf71510fabb16cff9183d4db044f6c468d06c3005d3e1e35b5a67b74ffdd7253",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench1_021_fixedN_025.npz",
+          "old_sha256": "a55b3ae872f5d53868e34d233666f1885763da6c436c26bfd4595588f41875a0",
+          "new_sha256": "a55b3ae872f5d53868e34d233666f1885763da6c436c26bfd4595588f41875a0",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench1_021_fixedN_050.npz",
+          "old_sha256": "9f50db3506bc5ccca130622b6ecc7c9bcaeccd34fbef989b03c8136da0259e97",
+          "new_sha256": "9f50db3506bc5ccca130622b6ecc7c9bcaeccd34fbef989b03c8136da0259e97",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench1_021_fixedN_075.npz",
+          "old_sha256": "9504f7e2e71c500439e3145b51f0e2bf3cdde2dbdfc62528be715a44a8d66fdc",
+          "new_sha256": "9504f7e2e71c500439e3145b51f0e2bf3cdde2dbdfc62528be715a44a8d66fdc",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench1_021_fixedN_100.npz",
+          "old_sha256": "f7ab944ccde58d9e1598835a42892bcef826cb0d2797555c4758bae671d2c5ff",
+          "new_sha256": "f7ab944ccde58d9e1598835a42892bcef826cb0d2797555c4758bae671d2c5ff",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench1_021_nested_000.npz",
+          "old_sha256": "bf71510fabb16cff9183d4db044f6c468d06c3005d3e1e35b5a67b74ffdd7253",
+          "new_sha256": "bf71510fabb16cff9183d4db044f6c468d06c3005d3e1e35b5a67b74ffdd7253",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench1_021_nested_025.npz",
+          "old_sha256": "523e8877c561949d776d6597b7fb08972ceb2cfb8bef1f935a3b07d5292028c9",
+          "new_sha256": "523e8877c561949d776d6597b7fb08972ceb2cfb8bef1f935a3b07d5292028c9",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench1_021_nested_050.npz",
+          "old_sha256": "2cad5f6a1d9aa81617a758fcd800cf689b95e887cec2fe3ab8eaae984e0a112a",
+          "new_sha256": "2cad5f6a1d9aa81617a758fcd800cf689b95e887cec2fe3ab8eaae984e0a112a",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench1_021_nested_075.npz",
+          "old_sha256": "5fc9f9f722a659a9d7c0fb603fe28e474f75c2beef2033907f4d3edefeb60380",
+          "new_sha256": "5fc9f9f722a659a9d7c0fb603fe28e474f75c2beef2033907f4d3edefeb60380",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench1_021_nested_100.npz",
+          "old_sha256": "9fc36fdd38d858599fc6a10af703715f5b41578ac1880282742541f3e240e14c",
+          "new_sha256": "9fc36fdd38d858599fc6a10af703715f5b41578ac1880282742541f3e240e14c",
+          "byte_identical": true
+        }
+      ],
+      "aggregate_tables": {
+        "task_summary": {
+          "rows_old": 6,
+          "rows_new": 6,
+          "columns_compared": 15,
+          "different_columns": []
+        },
+        "policy_metrics": {
+          "rows_old": 30,
+          "rows_new": 30,
+          "columns_compared": 20,
+          "different_columns": []
+        },
+        "partition_truth": {
+          "rows_old": 108,
+          "rows_new": 108,
+          "columns_compared": 21,
+          "different_columns": []
+        },
+        "error_fractions": {
+          "rows_old": 36,
+          "rows_new": 36,
+          "columns_compared": 19,
+          "different_columns": []
+        },
+        "family_differences": {
+          "rows_old": 6,
+          "rows_new": 6,
+          "columns_compared": 19,
+          "different_columns": []
+        },
+        "conditions": {
+          "rows_old": 90,
+          "rows_new": 90,
+          "columns_compared": 56,
+          "different_columns": []
+        },
+        "transitions": {
+          "rows_old": 540,
+          "rows_new": 540,
+          "columns_compared": 24,
+          "different_columns": []
+        },
+        "channels": {
+          "rows_old": 80,
+          "rows_new": 80,
+          "columns_compared": 22,
+          "different_columns": []
+        },
+        "joint": {
+          "rows_old": 720,
+          "rows_new": 720,
+          "columns_compared": 23,
+          "different_columns": []
+        },
+        "calls": {
+          "rows_old": 40,
+          "rows_new": 40,
+          "columns_compared": 25,
+          "different_columns": []
+        }
+      },
+      "resource": {
+        "elapsed_seconds": 82.75,
+        "peak_rss_KiB": 3629972,
+        "cpu_count": 1,
+        "nice": 10,
+        "address_space_limit_GiB": 4,
+        "swaps_reported": 0
+      }
+    },
+    "bench2": {
+      "split": 1,
+      "stage": "retrospective_second_experiment",
+      "roles": {
+        "donor": true,
+        "positive": true,
+        "negative": true,
+        "reference": true,
+        "test": true,
+        "seed": true,
+        "RNG": true
+      },
+      "feature_selection": {
+        "original_regular_mixed": {
+          "equal": true,
+          "feature_indices_equal": true,
+          "features_new": 141,
+          "features_old": 141,
+          "tested_new": 14889,
+          "tested_old": 14889
+        },
+        "original_regular_negative": {
+          "equal": true,
+          "feature_indices_equal": true,
+          "features_new": 144,
+          "features_old": 144,
+          "tested_new": 12540,
+          "tested_old": 12540
+        },
+        "original_loo_mixed": {
+          "equal": true,
+          "feature_indices_equal": true,
+          "features_new": 116,
+          "features_old": 116,
+          "tested_new": 12637,
+          "tested_old": 12637
+        },
+        "original_loo_negative": {
+          "equal": true,
+          "feature_indices_equal": true,
+          "features_new": 147,
+          "features_old": 147,
+          "tested_new": 9787,
+          "tested_old": 9787
+        },
+        "strict_regular_mixed": {
+          "equal": true,
+          "feature_indices_equal": true,
+          "features_new": 156,
+          "features_old": 156,
+          "tested_new": 9750,
+          "tested_old": 9750
+        },
+        "strict_regular_negative": {
+          "equal": true,
+          "feature_indices_equal": true,
+          "features_new": 156,
+          "features_old": 156,
+          "tested_new": 9750,
+          "tested_old": 9750
+        }
+      },
+      "scores": {
+        "original_regular_mixed": {
+          "rows": 2423,
+          "columns": [
+            "cell",
+            "truth",
+            "Neff",
+            "DNA_rank",
+            "RNA_score",
+            "RNA_rank",
+            "observed_source_features",
+            "source_marker_observable",
+            "MT_reads",
+            "mean_MT_coverage",
+            "observed_MT_positions",
+            "nuclear_UMI",
+            "raw_top50"
+          ],
+          "old_sha256": "fb1762411d247193bf5744bd0ac669572ef4cbe7ff631003210d261e7ea27ee2",
+          "new_sha256": "fb1762411d247193bf5744bd0ac669572ef4cbe7ff631003210d261e7ea27ee2",
+          "byte_identical": true,
+          "values_and_order_equal": true
+        },
+        "original_regular_negative": {
+          "rows": 1272,
+          "columns": [
+            "cell",
+            "truth",
+            "Neff",
+            "DNA_rank",
+            "RNA_score",
+            "RNA_rank",
+            "observed_source_features",
+            "source_marker_observable",
+            "MT_reads",
+            "mean_MT_coverage",
+            "observed_MT_positions",
+            "nuclear_UMI",
+            "raw_top50"
+          ],
+          "old_sha256": "361e4845fc2e5d16a92db45e5cc972ddd5dc8692b558e4c3d60c1b93b4efc0e3",
+          "new_sha256": "361e4845fc2e5d16a92db45e5cc972ddd5dc8692b558e4c3d60c1b93b4efc0e3",
+          "byte_identical": true,
+          "values_and_order_equal": true
+        },
+        "original_loo_mixed": {
+          "rows": 2423,
+          "columns": [
+            "cell",
+            "truth",
+            "Neff",
+            "DNA_rank",
+            "RNA_score",
+            "RNA_rank",
+            "observed_source_features",
+            "source_marker_observable",
+            "MT_reads",
+            "mean_MT_coverage",
+            "observed_MT_positions",
+            "nuclear_UMI",
+            "raw_top50"
+          ],
+          "old_sha256": "69e5c625cb924e0b4f7658f2060547e36006320737b620c884364c40b9874afd",
+          "new_sha256": "69e5c625cb924e0b4f7658f2060547e36006320737b620c884364c40b9874afd",
+          "byte_identical": true,
+          "values_and_order_equal": true
+        },
+        "original_loo_negative": {
+          "rows": 1272,
+          "columns": [
+            "cell",
+            "truth",
+            "Neff",
+            "DNA_rank",
+            "RNA_score",
+            "RNA_rank",
+            "observed_source_features",
+            "source_marker_observable",
+            "MT_reads",
+            "mean_MT_coverage",
+            "observed_MT_positions",
+            "nuclear_UMI",
+            "raw_top50"
+          ],
+          "old_sha256": "61c00025b0052dc26d2742486e880a433ba96209ce7cf6f5a92d066a237751d1",
+          "new_sha256": "61c00025b0052dc26d2742486e880a433ba96209ce7cf6f5a92d066a237751d1",
+          "byte_identical": true,
+          "values_and_order_equal": true
+        },
+        "strict_regular_mixed": {
+          "rows": 2423,
+          "columns": [
+            "cell",
+            "truth",
+            "Neff",
+            "DNA_rank",
+            "RNA_score",
+            "RNA_rank",
+            "observed_source_features",
+            "source_marker_observable",
+            "MT_reads",
+            "mean_MT_coverage",
+            "observed_MT_positions",
+            "nuclear_UMI",
+            "raw_top50"
+          ],
+          "old_sha256": "980957da5ce6016b467edf225f8c65f9a34285eb28680737292b0b90c80d4dd2",
+          "new_sha256": "980957da5ce6016b467edf225f8c65f9a34285eb28680737292b0b90c80d4dd2",
+          "byte_identical": true,
+          "values_and_order_equal": true
+        },
+        "strict_regular_negative": {
+          "rows": 1272,
+          "columns": [
+            "cell",
+            "truth",
+            "Neff",
+            "DNA_rank",
+            "RNA_score",
+            "RNA_rank",
+            "observed_source_features",
+            "source_marker_observable",
+            "MT_reads",
+            "mean_MT_coverage",
+            "observed_MT_positions",
+            "nuclear_UMI",
+            "raw_top50"
+          ],
+          "old_sha256": "a0224785f6706944baa9231ad074821ad93e8bd71dbdd119adb0ee703fdfd557",
+          "new_sha256": "a0224785f6706944baa9231ad074821ad93e8bd71dbdd119adb0ee703fdfd557",
+          "byte_identical": true,
+          "values_and_order_equal": true
+        }
+      },
+      "prepared": {
+        "old_sha256": "76e060a924ad8a118c84b8d912a2dd27c3e338e7bac7b901d7082a79374e74ac",
+        "new_sha256": "76e060a924ad8a118c84b8d912a2dd27c3e338e7bac7b901d7082a79374e74ac",
+        "byte_identical": true
+      },
+      "members": [
+        {
+          "scope": "task",
+          "name": "bench2_001_original_regular_mixed.npz",
+          "old_sha256": "6d0dc53659cac47daf6073df4fdc3e53f0f79e7b71c4ab05927eae9357488169",
+          "new_sha256": "6d0dc53659cac47daf6073df4fdc3e53f0f79e7b71c4ab05927eae9357488169",
+          "byte_identical": true
+        },
+        {
+          "scope": "task",
+          "name": "bench2_001_original_regular_negative.npz",
+          "old_sha256": "95eb181de5c1b68b2649805d7bd6d5e30a0c4dfff595ca7edd84513e2d790f19",
+          "new_sha256": "95eb181de5c1b68b2649805d7bd6d5e30a0c4dfff595ca7edd84513e2d790f19",
+          "byte_identical": true
+        },
+        {
+          "scope": "task",
+          "name": "bench2_001_original_loo_mixed.npz",
+          "old_sha256": "72e7e6c386cc7b1455cc521e103871f94353d22d74bdbb2c653d406c71120661",
+          "new_sha256": "72e7e6c386cc7b1455cc521e103871f94353d22d74bdbb2c653d406c71120661",
+          "byte_identical": true
+        },
+        {
+          "scope": "task",
+          "name": "bench2_001_original_loo_negative.npz",
+          "old_sha256": "e45a64e036bce7e0dd4e068381cff181f460be0eda130e09eabf6e3789c687ca",
+          "new_sha256": "e45a64e036bce7e0dd4e068381cff181f460be0eda130e09eabf6e3789c687ca",
+          "byte_identical": true
+        },
+        {
+          "scope": "task",
+          "name": "bench2_001_strict_regular_mixed.npz",
+          "old_sha256": "b01370cb558fa8989543be178effc6e512fc30248433e012e47f21e3c7572a3c",
+          "new_sha256": "b01370cb558fa8989543be178effc6e512fc30248433e012e47f21e3c7572a3c",
+          "byte_identical": true
+        },
+        {
+          "scope": "task",
+          "name": "bench2_001_strict_regular_negative.npz",
+          "old_sha256": "fca4cd7a24905b0f3f8332c7b4daea8a27a5358f2261ffa86eea5c3909628add",
+          "new_sha256": "fca4cd7a24905b0f3f8332c7b4daea8a27a5358f2261ffa86eea5c3909628add",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench2_001_fixedN_000.npz",
+          "old_sha256": "99f4c391578e2494d914cfa624f8978ee54bb868c093721d4a085613dff4f5cb",
+          "new_sha256": "99f4c391578e2494d914cfa624f8978ee54bb868c093721d4a085613dff4f5cb",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench2_001_fixedN_025.npz",
+          "old_sha256": "9c7d459d504bc53d54770b2c7bc3abae9a450c79d5a2db9b4995901319b21818",
+          "new_sha256": "9c7d459d504bc53d54770b2c7bc3abae9a450c79d5a2db9b4995901319b21818",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench2_001_fixedN_050.npz",
+          "old_sha256": "6ec06bbe652ce31e9f29c96e36e69b5d0405db22385b13ee184a29e2e08401a8",
+          "new_sha256": "6ec06bbe652ce31e9f29c96e36e69b5d0405db22385b13ee184a29e2e08401a8",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench2_001_fixedN_075.npz",
+          "old_sha256": "bad993fb10608af7b589e3dd381eb5662b8955d0bdecdec732386c1049c34525",
+          "new_sha256": "bad993fb10608af7b589e3dd381eb5662b8955d0bdecdec732386c1049c34525",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench2_001_fixedN_100.npz",
+          "old_sha256": "7037bef9f81f655368ca4c35d37af36e7cd37edc1468ced75fccc181b50e7deb",
+          "new_sha256": "7037bef9f81f655368ca4c35d37af36e7cd37edc1468ced75fccc181b50e7deb",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench2_001_nested_000.npz",
+          "old_sha256": "99f4c391578e2494d914cfa624f8978ee54bb868c093721d4a085613dff4f5cb",
+          "new_sha256": "99f4c391578e2494d914cfa624f8978ee54bb868c093721d4a085613dff4f5cb",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench2_001_nested_025.npz",
+          "old_sha256": "6b945ed5c497aa3a033eeaed7a80242ae920e78b95ec805c0e43342f847f76e5",
+          "new_sha256": "6b945ed5c497aa3a033eeaed7a80242ae920e78b95ec805c0e43342f847f76e5",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench2_001_nested_050.npz",
+          "old_sha256": "8e5e6c497d951fdddbbad1cddf8be4f611d64d5f40fba17fdb00d8419c28c472",
+          "new_sha256": "8e5e6c497d951fdddbbad1cddf8be4f611d64d5f40fba17fdb00d8419c28c472",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench2_001_nested_075.npz",
+          "old_sha256": "ea07743f6a948c45510696f91bf2df7f1e3894a3fcc66d394aaa489d07f5c28b",
+          "new_sha256": "ea07743f6a948c45510696f91bf2df7f1e3894a3fcc66d394aaa489d07f5c28b",
+          "byte_identical": true
+        },
+        {
+          "scope": "cohort",
+          "name": "bench2_001_nested_100.npz",
+          "old_sha256": "d536b12541244beaa21a716e11c67b99faee14c5d14c76f1c3b565d724db88ac",
+          "new_sha256": "d536b12541244beaa21a716e11c67b99faee14c5d14c76f1c3b565d724db88ac",
+          "byte_identical": true
+        }
+      ],
+      "aggregate_tables": {
+        "task_summary": {
+          "rows_old": 6,
+          "rows_new": 6,
+          "columns_compared": 15,
+          "different_columns": []
+        },
+        "policy_metrics": {
+          "rows_old": 30,
+          "rows_new": 30,
+          "columns_compared": 20,
+          "different_columns": []
+        },
+        "partition_truth": {
+          "rows_old": 108,
+          "rows_new": 108,
+          "columns_compared": 21,
+          "different_columns": []
+        },
+        "error_fractions": {
+          "rows_old": 36,
+          "rows_new": 36,
+          "columns_compared": 19,
+          "different_columns": []
+        },
+        "family_differences": {
+          "rows_old": 6,
+          "rows_new": 6,
+          "columns_compared": 19,
+          "different_columns": []
+        },
+        "conditions": {
+          "rows_old": 90,
+          "rows_new": 90,
+          "columns_compared": 56,
+          "different_columns": []
+        },
+        "transitions": {
+          "rows_old": 540,
+          "rows_new": 540,
+          "columns_compared": 24,
+          "different_columns": []
+        },
+        "channels": {
+          "rows_old": 80,
+          "rows_new": 80,
+          "columns_compared": 22,
+          "different_columns": []
+        },
+        "joint": {
+          "rows_old": 720,
+          "rows_new": 720,
+          "columns_compared": 23,
+          "different_columns": []
+        },
+        "calls": {
+          "rows_old": 40,
+          "rows_new": 40,
+          "columns_compared": 25,
+          "different_columns": []
+        }
+      },
+      "resource": {
+        "elapsed_seconds": 30.92,
+        "peak_rss_KiB": 1680184,
+        "cpu_count": 1,
+        "nice": 10,
+        "address_space_limit_GiB": 4,
+        "swaps_reported": 0
+      }
+    }
+  },
+  "scope": "Private cell and member contents are not distributed; hashes and aggregated counts only."
+}

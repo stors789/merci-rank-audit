@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.3
+
+- Add B1/B2 six-case input generation from explicitly supplied processed files,
+  preserving historical roles, scoring cases, thresholds and private input binding.
+- Add static checks of all 720 historical case selectors and retain the existing
+  B1 strict-only and B2 one-case entry points.
+
 ## 0.1.2
 
 - Add an explicit B1 frozen strict split preparation from the four public processed inputs and pinned upstream MERCI checkout.

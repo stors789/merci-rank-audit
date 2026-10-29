@@ -1,7 +1,8 @@
 # Tested reproduction environment
 
-The accepted B1 split21 reconstruction used Python 3.12.3 and the exact package
-versions in `constraints-tested-py312.txt`. From the extracted source distribution:
+The accepted 0.1.2 B1 split21 reconstruction used Python 3.12.3 and the dependency
+versions in `constraints-tested-py312.txt`. That file pins the current candidate
+package separately from the already published 0.1.2. From the extracted source distribution:
 
 ```sh
 python3.12 -m venv .venv
@@ -31,8 +32,10 @@ redistributed. Hosted CI obtains its dependencies independently.
 
 For the full-input run, set numerical-library threads to one and supply a new
 output directory, the four original processed files and the separately obtained
-pinned MERCI checkout as described in `INPUTS.md`. The recorded run used nice 10,
-one CPU and a 4 GiB address-space ceiling; its peak RSS was about 2.62 GiB. These
+pinned MERCI checkout as described in `INPUTS.md`. The prior 0.1.2 B1 strict-only
+run used nice 10, one CPU and a 4 GiB address-space ceiling; its peak RSS was about
+2.62 GiB. The candidate's six-case B1 and B2 runs used the same execution limits
+and peaked at 3,629,972 and 1,680,184 KiB RSS respectively. These
 settings and the input hashes accompany the validation record; wall time depends
 on hardware and cache state. No original biological inputs or upstream source are
 included in this source distribution.

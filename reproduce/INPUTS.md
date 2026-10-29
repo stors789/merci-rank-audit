@@ -39,48 +39,42 @@ The [MERCI v1.0.3 dataset, Zenodo 8065206](https://zenodo.org/records/8065206), 
 | `--variants` | `mtSNV_profile(bench2_scRNAseq).txt` | cell, variant ID, position, ALT reads, total reads, allele fraction |
 | `--coverage` | `MT_covearge_cells(bench2_scRNAseq).txt` | mitochondrial position rows × cell columns, integer coverage |
 
-### B1 frozen strict split: four processed files to cohort inputs
+### Six-case B1/B2 inputs from the four processed files
 
-From the extracted source distribution, set `REPRO` to this directory and `DATA` to the directory holding the four **bench1** provider files. Obtain the upstream [MERCI checkout at commit 79e105aaf13159bee325c3ceceb6ee679e430341](https://github.com/shyhihihi/MERCI/tree/79e105aaf13159bee325c3ceceb6ee679e430341) separately under its own academic-use terms. R 4.4.1 with Matrix, data.table, jsonlite, e1071 and proxy in an explicitly supplied user library was used for the verified run. The Python package must be installed; the output directory must not already exist.
+Set `REPRO` to this directory and `DATA` to the directory holding the four provider files for the chosen batch. Obtain the upstream [MERCI checkout at commit 79e105aaf13159bee325c3ceceb6ee679e430341](https://github.com/shyhihihi/MERCI/tree/79e105aaf13159bee325c3ceceb6ee679e430341) separately under its academic-use terms. R 4.4.1 with Matrix, data.table, jsonlite, e1071 and proxy in an explicitly supplied user library was used for local checks. The installed Python package and a **new** private output directory are required. For example, use the four bench1 files for B1 frozen split 21:
 
 ```sh
-python "$REPRO/drivers/b1/run.py" \
+python "$REPRO/drivers/benchmark_inputs/run.py" \
   --info "$DATA/cell_information(bench1_scRNAseq).txt" \
   --expression "$DATA/normalized_exp_matrix(bench1_scRNAseq).txt" \
   --variants "$DATA/mtSNV_profile(bench1_scRNAseq).txt" \
   --coverage "$DATA/MT_covearge_cells(bench1_scRNAseq).txt" \
   --upstream "$MERCI_CHECKOUT" --rscript "$RSCRIPT" --r-library "$R_USER_LIBRARY" \
-  --split 21 --output "$PRIVATE/b1-split21-new"
+  --experiment bench1 --split 21 --output "$PRIVATE/b1-split21-new"
 ```
 
-`--split` accepts the original frozen B1 split numbers 21–100. Each uses the original R split seed `202610260 + split`, the case-specific frozen maxima/ID digests and the three stored composition selection seeds. The generator reads the public expression matrix and retains the original 13 `mt-` gene rows in their original order; it derives T, CC, reference MC and test MC from the public metadata, then scores strict mixed/negative and prepares fixed-N and nested conditions. The task's original maxima are the saved 10,000-draw maxima in `configs/cohort_formal_portable.json`; the composition conditions use the separate saved BIO-04 matched-N table in `data/cohort_null_maxima.csv`. Neither table is regenerated or exchanged for the other.
+For B2 use the four `bench2_scRNAseq` filenames with `--experiment bench2 --split 1`. Allowed original manifest selections are B1 1–20 (`development_reused`), B1 21–100 (`frozen_evaluation`), and B2 1–20 (`retrospective_second_experiment`); these are technical splits of the two original experiments, not independent patients. The original seeds are `202610260 + split` for B1 and `202610290 + split` for B2, using R Mersenne-Twister/Inversion/Rejection. The published B1 strict-only `drivers/b1/run.py` interface remains available for its original 21–100 range.
 
-The output includes `generated/` private score/role/feature files, a new `prepared.npz`, a freshly bound `cohort_manifest.json`, `cohort/` outputs and `run_complete.json`. All contain or derive from individual cells and should remain private. New score/NPZ bytes are bound to new hashes; historical hashes remain separate provenance. `historical_byte_match` and `historical_identity_status` explicitly report comparison to those frozen hashes. `BYTE_IDENTICAL` supports byte identity; `DIFFERENT_BYTES_REQUIRES_COMPARISON` does not establish a scientific mismatch or equality without a separate comparison of arrays, ordering and parameters. No historical sample file is re-signed or reused.
+The six cases are `original_regular_mixed`, `original_regular_negative`, `original_loo_mixed`, `original_loo_negative`, `strict_regular_mixed` and `strict_regular_negative`. Mixed contains CC plus test MC, negative contains only test MC. Regular uses reference MC for enrichment comparison, background and RNA reference, while original regular visibility also includes candidates. Original LOO uses its own candidate set for feature visibility, comparison and background, and invokes the original leave-one-out RNA function separately for mixed and negative. Strict uses only donor plus reference for source selection and background, excluding test targets. Identical-reference regular RNA weights are computed once for mixed, then subset and reranked for each candidate axis; the prior first B2 negative check called the original regular function independently and found exact weights and ranks. Each case's feature selection and DNA scoring remain separate.
 
-For split 21 the original 6,690 mixed and 3,786 negative scores, prepared NPZ and 12 task/condition member files matched existing frozen bytes in a local full-input run; see `data/b1/split21_validation.json` for aggregate evidence. This does not claim that the other 79 splits were rerun. The measured local run used one thread, nice 10 and a 4 GiB address-space ceiling; peak RSS was about 2.63 GiB, and timings are hardware/cache dependent. First verify source file sizes and provider checksums under the dataset's CC BY 4.0 terms, and maintain enough free memory for coverage parsing. The B1 scripts do not download data or install dependencies.
+The original 13 mouse mitochondrial gene rows are retained in their frozen order. B2 expression column IDs map periods to hyphens before the one-to-one check. The input coverage must provide integer position-by-cell counts, and variant rows must include `Cell,ID,pos,s_reads,t_reads,AF` with the original variant IDs. Feature selection, depth 5, observability, Yates/BH and background formulas use the project engine; thresholds and RNG are not newly fitted. The original task's saved ten maxima come from `configs/cohort_formal_portable.json`. The ten nested/fixed-N composition conditions instead use the separate BIO-04 matched-N maxima in `data/cohort_null_maxima.csv`; the two tables are not interchanged.
 
-Small synthetic preparation checks, separate from biological results:
+The private `generated/` directory contains six `*_cells.tsv.gz` scores, six feature-selection RDS files, roles and a generation receipt. Score rows use the frozen candidate order and 13 fields: `cell,truth,Neff,DNA_rank,RNA_score,RNA_rank,observed_source_features,source_marker_observable,MT_reads,mean_MT_coverage,observed_MT_positions,nuclear_UMI,raw_top50`. `prepared.npz`, `cohort_manifest.json`, `cohort/` and `run_complete.json` are bound to the freshly generated score and NPZ bytes. The manifest preserves historical hashes separately and checks frozen ordered IDs, split-selection digests and gates. `BYTE_IDENTICAL` means hashes match; `DIFFERENT_BYTES_REQUIRES_COMPARISON` requires explicit value, order and parameter comparison before any equivalence claim. No historical sample is re-signed or reused.
+
+For B1 split 21 and B2 split 1, local full-input executions generated all 12 scores, both composition NPZ files and 32 task/condition member files byte-identically to the historical inputs and outputs. The 13 score columns and ordering, roles, all six feature-selection objects per batch, and common aggregate fields were also compared; [aggregate validation](data/benchmark_inputs/validation.json) records their scope and hashes. Other 118 splits were checked for configuration selection only, not rerun. In these local runs B1 took 82.75 seconds and peaked at 3,629,972 KiB RSS; B2 took 30.92 seconds and peaked at 1,680,184 KiB, each under a 4 GiB address-space limit on one CPU with nice 10. Timings and memory depend on hardware, software and cache state.
+
+The scripts neither download data nor install dependencies. First verify provider file integrity and licensing, and maintain sufficient memory for coverage parsing. Full generated score, role, NPZ and member files contain individual cells and must remain private. Checks of configuration coverage do not claim that every split has been run. The separately available `merci-rank-audit bench2` command remains a complete specific B2 split 1 original-regular negative wrapper, documented in `../docs/bench2.md`.
+
+Small independent engineering checks:
 
 ```sh
+python "$REPRO/fixtures/benchmark_inputs/check_config.py"
 R_LIBS_USER="$R_USER_LIBRARY" "$RSCRIPT" --vanilla "$REPRO/fixtures/b1/check_coverage.R" \
   "$REPRO/drivers/b1/read_coverage.R" "$REPRO/fixtures/b1/coverage.tsv"
-python "$REPRO/fixtures/b1/check_prepare.py" --output "$PRIVATE/b1-synthetic-check"
+python "$REPRO/fixtures/b1/check_prepare.py" --output "$PRIVATE/synthetic-check"
 ```
 
-A complete existing preparation entry for the **B2 split 1 original-regular negative case** is the installed `merci-rank-audit bench2` command, documented in `../docs/bench2.md`. It requires the four files and an independently obtained [MERCI checkout at commit 79e105aaf13159bee325c3ceceb6ee679e430341](https://github.com/shyhihihi/MERCI/tree/79e105aaf13159bee325c3ceceb6ee679e430341) under its separate academic-use license, plus R and the listed packages. The command writes `score.tsv` and `thresholds.csv`; it is not a general B1/B2 generator.
-
-For the 720 annotation cases, bind each historical `*_cells.tsv.gz` file at the path specified in `configs/cohort_formal_portable.json`; that manifest carries its original bytes and ID digest plus the ten maxima. For each of the 120 strict-chain composition splits, use its original frozen mixed and negative score tables and regenerate the selection using its saved seeds and ordered-ID digests:
-
-```sh
-python "$REPRO/drivers/cohort/prepare_split.py" --manifest "$REPRO/configs/cohort_formal_portable.json" \
-  --experiment bench1 --split 1 --mixed "$PRIVATE/strict_regular_mixed_cells.tsv.gz" \
-  --negative "$PRIVATE/strict_regular_negative_cells.tsv.gz" --output "$PRIVATE/prepared.npz" \
-  --output-manifest "$PRIVATE/cohort-rebound.json"
-```
-
-The optional rebound manifest records the regenerated NPZ byte hash while retaining its historical hash, after verifying original score bytes, ID axes and frozen selection digests. It contains local absolute paths and must remain private. To prepare further splits, pass the latest rebound manifest to the next invocation and write a new one. The 51-case benchmark's 44 synthetic NPZ files are provided; each of seven real cases needs its frozen score and threshold bytes. Create the real NPZ and a locally rebound configuration with `drivers/benchmark/prepare_case.py --config ... --case ... --manifest ... --output-npz ... --output-config ...` after preparing the one-case score manifest. It rejects changed original score/threshold bytes or canonical arrays.
-
-**Remaining gap:** this entry covers B1 frozen strict mixed/negative preparation and the specific B2 split 1 regular-negative wrapper. It does not provide every B1/B2 original/LOO score chain or the former post-hoc endpoint-versus-old-results/witness comparison, and does not establish reproduction of all 720 historical score files. Exact original frozen gzip SHA-256 values may depend on serialization; do not silently substitute different bytes.
+For preexisting strict score tables, `drivers/cohort/prepare_split.py` can still regenerate a composition NPZ using the corresponding manifest and frozen seeds; its rebound manifest records the regenerated NPZ hash and retains its historical hash. The 51-case benchmark's 44 synthetic NPZ files are provided; each of seven real cases needs its frozen score and threshold bytes. Create the real NPZ and a locally rebound configuration with `drivers/benchmark/prepare_case.py --config ... --case ... --manifest ... --output-npz ... --output-config ...` after preparing the one-case score manifest. It rejects changed original score/threshold bytes or canonical arrays. The former post-hoc endpoint-versus-old-results/witness comparison is not supplied as a standalone public input chain.
 
 ## P2 HCC patient input
 

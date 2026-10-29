@@ -25,7 +25,7 @@ python reproduce/verify.py --output /tmp/merci-reproduce-check
 
 The output directory must not exist. The `reproduce` extra installs Matplotlib ≥3.8,<4, pypdf ≥4,<7 and ReportLab ≥4,<5. NumPy, pandas and SciPy versions are constrained by the installed library. For reproducible resource use, set `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1` before execution. On Linux the previous analysis used one core, nice 10 and an address-space ceiling of 4 GiB; these execution policies are not hidden inside the scripts.
 
-`verify.py` also checks B1 synthetic score binding, preparation and the original float64 observation representation and missing-value handling. It executes the original rare synthetic benchmark's first seed for 100 proposals, a 20-cell synthetic composition task and ten conditions, 100 conditional synthetic nuclear proposals, and four synthetic tie/threshold scenarios. It checks frozen benchmark RMSE, expected confusion counts and transition totals, an independent least-squares coefficient, the 500-valid-beta reporting threshold, and exact hypergeometric gate probabilities. It separately renders and parses all ten figure PDFs and PNGs. Fixture inputs are synthetic; `private_members` outputs can contain IDs when real inputs are supplied and should remain private.
+`verify.py` also checks B1 synthetic score binding, preparation and the original float64 observation representation and missing-value handling, plus the 720 B1/B2 case selectors and 120 stage identities without executing those cases. It executes the original rare synthetic benchmark's first seed for 100 proposals, a 20-cell synthetic composition task and ten conditions, 100 conditional synthetic nuclear proposals, and four synthetic tie/threshold scenarios. It checks frozen benchmark RMSE, expected confusion counts and transition totals, an independent least-squares coefficient, the 500-valid-beta reporting threshold, and exact hypergeometric gate probabilities. It separately renders and parses all ten figure PDFs and PNGs. Fixture inputs are synthetic; `private_members` outputs can contain IDs when real inputs are supplied and should remain private.
 
 ## Figures and data mapping
 
@@ -52,9 +52,9 @@ python "$REPRO/figures/bio06_figure.py" --data "$REPRO/data/bio06" --output "$OU
 
 The selected CSVs preserve source numerical precision. `data/supplementary_data.zip` is the original 59-table aggregate supplement with its own manifest; it contains broader checkpoint, family, composition and nuclear tables. Figures S1–S4 were redrawn using portable code, so their presentation can differ slightly from the original snapshots without changing values. See [SOURCE_MAP.md](SOURCE_MAP.md) for provenance and rights.
 
-## B1 strict input preparation
+## B1/B2 benchmark input preparation
 
-The source distribution provides a B1 strict entry point from the four public processed input files and the separately obtained pinned MERCI checkout. It supports the frozen B1 split numbers 21–100; split 21 was actually regenerated and compared in the development environment. It produces new private scores and a new cohort manifest before running the two tasks and ten conditions. See [INPUTS.md](INPUTS.md#b1-and-b2-experimental-benchmarks) for the explicit command, historical identity checks, resource and rights boundaries.
+The source distribution provides a six-case entry from the four public processed input files of each batch and the separately obtained pinned MERCI checkout. It supports B1 development 1–20 and frozen 21–100, and B2 retrospective 1–20. B1 split 21 and B2 split 1 were locally regenerated from the four original files and compared with the historical roles, feature selections, scores, composition inputs, members and aggregate results. Each produces six private scores, a new cohort manifest, six task outputs and ten composition conditions. The other 118 splits were checked as configuration selections only. The original B1 strict-only entry remains available. See [INPUTS.md](INPUTS.md#b1-and-b2-experimental-benchmarks) for commands, identity checks, resources and rights.
 
 ## Four full analysis entry points
 
