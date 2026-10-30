@@ -1,0 +1,82 @@
+[
+  {
+    "GSM": "GSM7774394",
+    "title": "1NT",
+    "file": "GSM7774394_1NT_P21.tar.gz",
+    "pair": "21",
+    "tissue": "NT",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7774nnn/GSM7774394/suppl/GSM7774394_1NT_P21.tar.gz"
+  },
+  {
+    "GSM": "GSM7774395",
+    "title": "2NT",
+    "file": "GSM7774395_2NT_P24.tar.gz",
+    "pair": "24",
+    "tissue": "NT",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7774nnn/GSM7774395/suppl/GSM7774395_2NT_P24.tar.gz"
+  },
+  {
+    "GSM": "GSM7774396",
+    "title": "3NT",
+    "file": "GSM7774396_3NT_P25.tar.gz",
+    "pair": "25",
+    "tissue": "NT",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7774nnn/GSM7774396/suppl/GSM7774396_3NT_P25.tar.gz"
+  },
+  {
+    "GSM": "GSM7774397",
+    "title": "4NT",
+    "file": "GSM7774397_4NT_P29.tar.gz",
+    "pair": "29",
+    "tissue": "NT",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7774nnn/GSM7774397/suppl/GSM7774397_4NT_P29.tar.gz"
+  },
+  {
+    "GSM": "GSM7774398",
+    "title": "5NT",
+    "file": "GSM7774398_5NT_P36.tar.gz",
+    "pair": "36",
+    "tissue": "NT",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7774nnn/GSM7774398/suppl/GSM7774398_5NT_P36.tar.gz"
+  },
+  {
+    "GSM": "GSM7774399",
+    "title": "1T",
+    "file": "GSM7774399_1T_C21.tar.gz",
+    "pair": "21",
+    "tissue": "T",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7774nnn/GSM7774399/suppl/GSM7774399_1T_C21.tar.gz"
+  },
+  {
+    "GSM": "GSM7774400",
+    "title": "2T",
+    "file": "GSM7774400_2T_C24.tar.gz",
+    "pair": "24",
+    "tissue": "T",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7774nnn/GSM7774400/suppl/GSM7774400_2T_C24.tar.gz"
+  },
+  {
+    "GSM": "GSM7774401",
+    "title": "3T",
+    "file": "GSM7774401_3T_C25.tar.gz",
+    "pair": "25",
+    "tissue": "T",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7774nnn/GSM7774401/suppl/GSM7774401_3T_C25.tar.gz"
+  },
+  {
+    "GSM": "GSM7774402",
+    "title": "4T",
+    "file": "GSM7774402_4T_C29.tar.gz",
+    "pair": "29",
+    "tissue": "T",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7774nnn/GSM7774402/suppl/GSM7774402_4T_C29.tar.gz"
+  },
+  {
+    "GSM": "GSM7774403",
+    "title": "5T",
+    "file": "GSM7774403_5T_C36.tar.gz",
+    "pair": "36",
+    "tissue": "T",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7774nnn/GSM7774403/suppl/GSM7774403_5T_C36.tar.gz"
+  }
+]

@@ -44,6 +44,17 @@ jobs:
           python -m pytest -q tests
       - name: Check analysis drivers and redraw all figures
         run: python reproduce/verify.py --output "$RUNNER_TEMP/merci-reproduce-check"
+      - name: Check P2 preprocessing and recovery fixtures
+        run: |
+          python -m pip install 'anndata==0.13.4' 'pysam==0.24.1'
+          python reproduce/fixtures/p2/check_gexscope.py
+          python reproduce/fixtures/p2/check_half_counts.py
+          python reproduce/fixtures/p2/check_joint_concat.py
+          python reproduce/fixtures/p2/check_preflight.py --output "$RUNNER_TEMP/p2-preflight"
+          python reproduce/fixtures/p2/check_incomplete_extraction.py --output "$RUNNER_TEMP/p2-incomplete"
+          python reproduce/fixtures/p2/check_alignment_resume.py --output "$RUNNER_TEMP/p2-resume"
+          python reproduce/fixtures/p2/check_alignment_consensus.py --output "$RUNNER_TEMP/p2-alignment-consensus"
+          python reproduce/fixtures/p2/check_nuclear.py --output "$RUNNER_TEMP/p2-nuclear"
       - uses: r-lib/actions/setup-r@v2
         with:
           r-version: '4.4.1'

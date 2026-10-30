@@ -8,11 +8,11 @@ physical mitochondrial transfer.
 
 [Source code](https://github.com/stors789/merci-rank-audit) · [Versioned releases](https://github.com/stors789/merci-rank-audit/releases)
 
-Install a wheel in an isolated Python environment. The source version is 0.1.4.
+Install a wheel in an isolated Python environment. The source version is 0.1.5.
 Download built distributions from the repository release page.
 
 ```sh
-python -m pip install merci_rank_audit-0.1.4-py3-none-any.whl
+python -m pip install merci_rank_audit-0.1.5-py3-none-any.whl
 merci-rank-audit init-example --output ./example
 merci-rank-audit audit --manifest ./example/manifest.json --output ./exact
 merci-rank-audit audit --manifest ./example/manifest.json --output ./sampled --sample both
@@ -109,3 +109,5 @@ The source distribution includes the portable [reproduction materials](reproduce
 
 
 The source distribution includes [B1 strict input preparation](reproduce/INPUTS.md#b1-and-b2-experimental-benchmarks) from four public processed files and a separately obtained upstream checkout. Frozen split 21 was regenerated in an isolated environment with byte-identical scores, composition input and member outputs. Other supported split configurations were checked statically; see the input guide for the executed scope.
+
+The candidate also includes the [P2 public-input workflow](reproduce/drivers/p2/INPUTS.md). A staged full-input run regenerated the score, fixed thresholds, nuclear arrays and exact families against the historical case; its combined wrapper was not independently rerun on the complete FASTQs. The input guide identifies the separate data, reference, GMT and upstream dependencies and the scope of the checks.

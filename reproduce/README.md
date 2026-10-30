@@ -58,7 +58,11 @@ The source distribution provides a six-case entry from the four public processed
 
 ## GBML181 public-input reconstruction
 
-The GBML181 candidate workflow starts with the three public matrix attachments, both native SRA archives and the complete hg38 reference/index. It reconstructs the fixed RNA roles, competitive alignment and joint UMI consensus, then creates new score/threshold bytes and an exact audit without requesting historical private intermediates. The external VDB, minimap2, R and separately obtained MERCI dependencies and explicit commands are in [GBML181 inputs](drivers/gbml/INPUTS.md). The local full-input check is one sample; its original author malignant labels are unavailable and the Cell Ranger read/duplicate convention is not reproduced. P2 remains a distinct input-preparation gap.
+The GBML181 candidate workflow starts with the three public matrix attachments, both native SRA archives and the complete hg38 reference/index. It reconstructs the fixed RNA roles, competitive alignment and joint UMI consensus, then creates new score/threshold bytes and an exact audit without requesting historical private intermediates. The external VDB, minimap2, R and separately obtained MERCI dependencies and explicit commands are in [GBML181 inputs](drivers/gbml/INPUTS.md). The local full-input check is one sample; its original author malignant labels are unavailable and the Cell Ranger read/duplicate convention is not reproduced.
+
+## P2 public-input reconstruction
+
+The P2 stages start with all ten paired GEO count archives, the full SRR26035078 mates, hg38, a separately obtained Hallmark GMT and the pinned MERCI checkout. A staged real-input run regenerated the fixed working roles, full-reference alignments, UMI consensus, score, nuclear matrices, fixed-label models, exact families and a 100-proposal reference prefix. Score, threshold and nuclear input bytes match the historical case; the prefix's largest beta difference is 6.94×10⁻¹⁸ and is explained by arithmetic batch shape. The end-to-end wrapper has not independently repeated the full real inputs. [P2 inputs](drivers/p2/INPUTS.md) and [aggregate validation](data/p2/validation.json) state the executed scope, source rights and first differences.
 
 ## Four full analysis entry points
 

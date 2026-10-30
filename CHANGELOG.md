@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.5 (candidate)
+
+- Add the fixed P2 public-input reconstruction, nuclear preparation and exact
+  audit stages, with separate MSigDB and academic-use MERCI dependencies.
+- Record a staged full-input reconstruction and comparisons; the combined
+  wrapper has not independently repeated the complete FASTQs.
+
 ## 0.1.4 (candidate)
 
 - Add an explicit GBML181 reconstruction workflow from its public matrix and
