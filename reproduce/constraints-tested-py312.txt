@@ -1,5 +1,5 @@
 # Python 3.12.3 reproduction environment; this candidate's package version is pinned.
-merci-rank-audit==0.1.5
+merci-rank-audit==0.1.6
 numpy==2.5.4
 pandas==3.1.0
 scipy==1.18.1

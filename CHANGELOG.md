@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.6
+
+- Sync `reproduce/figures/` with the journal-sized five main figures (`Figure1_workflow`–`Figure5_nuclear`) and four supplementary figures (`FigureS1_gate`–`FigureS4_bio06`) in vector PDF/SVG and 350 dpi PNG; retain `FigureS2_cohorts.csv` as aggregate source data without a separate duplicate supplementary plate.
+- Add the 240-task original-regular raw-family partition table, Table 1 case and full-cohort summary tables, eight-cell enumeration verification fixture, and 80-order saved-score replay aggregates under `reproduce/data/analysis/` and `reproduce/data/row_order_evidence/`.
+- Keep the `merci_rank_audit` numerical library unchanged.
+
 ## 0.1.5
 
 - Add the fixed P2 public-input reconstruction, nuclear preparation and exact

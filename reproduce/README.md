@@ -4,7 +4,7 @@ This directory contains project-authored code, aggregate data and synthetic fixt
 
 Three reproducibility levels are distinct:
 
-1. The aggregate tables included here redraw all five main figures and five supplementary figures; no original research tree is required.
+1. The aggregate tables included here redraw all five main figures and four supplementary figures; no original research tree is required.
 2. The four analysis drivers accept explicit inputs and original parameters; a small synthetic or frozen-seed prefix runs end to end with independently checked expectations.
 3. The original complete 51-case benchmark, 720 annotation tasks, 1,200 composition conditions, P2 reference and BIO-06 scientific runs were performed earlier. The small checks do not repeat those complete raw-data analyses. Exact real-input digests and seeds are retained; producing every historical real input from raw is not fully provided here.
 
@@ -25,7 +25,7 @@ python reproduce/verify.py --output /tmp/merci-reproduce-check
 
 The output directory must not exist. The `reproduce` extra installs Matplotlib ≥3.8,<4, pypdf ≥4,<7 and ReportLab ≥4,<5. NumPy, pandas and SciPy versions are constrained by the installed library. For reproducible resource use, set `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1` before execution. On Linux the previous analysis used one core, nice 10 and an address-space ceiling of 4 GiB; these execution policies are not hidden inside the scripts.
 
-`verify.py` also checks B1 synthetic score binding, preparation and the original float64 observation representation and missing-value handling, plus the 720 B1/B2 case selectors and 120 stage identities without executing those cases. It executes the original rare synthetic benchmark's first seed for 100 proposals, a 20-cell synthetic composition task and ten conditions, 100 conditional synthetic nuclear proposals, and four synthetic tie/threshold scenarios. It checks frozen benchmark RMSE, expected confusion counts and transition totals, an independent least-squares coefficient, the 500-valid-beta reporting threshold, and exact hypergeometric gate probabilities. It separately renders and parses all ten figure PDFs and PNGs. Fixture inputs are synthetic; `private_members` outputs can contain IDs when real inputs are supplied and should remain private.
+`verify.py` also checks B1 synthetic score binding, preparation and the original float64 observation representation and missing-value handling, plus the 720 B1/B2 case selectors and 120 stage identities without executing those cases. It executes the original rare synthetic benchmark's first seed for 100 proposals, a 20-cell synthetic composition task and ten conditions, 100 conditional synthetic nuclear proposals, and four synthetic tie/threshold scenarios. It checks frozen benchmark RMSE, expected confusion counts and transition totals, an independent least-squares coefficient, the 500-valid-beta reporting threshold, and exact hypergeometric gate probabilities. It separately renders and parses all nine figure PDFs, SVGs and PNGs, and checks the 240-task raw-family partition table, Table 1 case summary and 80-order saved-score replay aggregate. Fixture inputs are synthetic; `private_members` outputs can contain IDs when real inputs are supplied and should remain private.
 
 ## Figures and data mapping
 
@@ -34,7 +34,6 @@ The following commands can also be run separately from any working directory. Re
 ```sh
 python "$REPRO/figures/main_figures.py" --data "$REPRO/data/figures" --output "$OUT"
 python "$REPRO/figures/supplement_figures.py" --data "$REPRO/data/figures" --output "$OUT"
-python "$REPRO/figures/bio06_figure.py" --data "$REPRO/data/bio06" --output "$OUT"
 ```
 
 | Figure | Exact supplied data and selection |
@@ -42,15 +41,14 @@ python "$REPRO/figures/bio06_figure.py" --data "$REPRO/data/bio06" --output "$OU
 | 1 | Conceptual diagram; no tabular observations. |
 | 2 | `figure2_equal_time.csv`, P2, GBML181 and B2 split 1 negative, two-worker timing batch; uniform and two shared conditional estimates. |
 | 3 | `figure3_error_partitions.csv`, `figure3_paired_changes.csv`, B1 frozen and B2 retrospective original-regular mixed results. |
-| 4 | `figure4_core_curves.csv`, `figure4_endpoint_transitions.csv`, B1 frozen and B2 retrospective; fixed-N and nested references retain their own denominators. `figure4_channels.csv` is retained as source context. |
+| 4 | `figure4_core_curves.csv`, `figure4_endpoint_transitions.csv`, B1 frozen and B2 retrospective; fixed-N and nested references retain their own denominators. `figure4_channels.csv` and `FigureS2_cohorts.csv` are retained as aggregate source context. |
 | 5 | `figure5_reference_quantiles.csv`, `figure5_reference_signs.csv`, `figure5_selected_witness.csv`, `figure5_fixed_original.csv`, `figure5_fixed_alternative.csv`; two prespecified readouts in both representations. |
 | S1 | `FigureS1_gate.csv`, seven real cases, two-worker batch, equal-time gate errors. |
-| S2 | `FigureS2_cohorts.csv`, three stages, two designs and three specified state/call series. |
-| S3 | `FigureS3_precision.csv`, `FigureS3_reference_quantiles.csv`, four original/alternative outcome combinations; `FigureS3_old_vs_reference.csv` is retained context. |
-| S4 | `FigureS4_union.csv`, four fixed cases, one seed per method, four nested proposal budgets. |
-| S5 | `data/bio06/rarity_comparison.csv`, both cases at original RNA ranks, eleven threshold tables each; other BIO-06 aggregate source and threshold tables are in `data/bio06/`. |
+| S2 | `FigureS3_precision.csv`, `FigureS3_reference_quantiles.csv`, four original/alternative outcome combinations; `FigureS3_old_vs_reference.csv` is retained context. |
+| S3 | `FigureS4_union.csv`, four fixed cases, one seed per method, four nested proposal budgets. |
+| S4 | `data/bio06/rarity_comparison.csv`, both cases at original RNA ranks, eleven threshold tables each; other BIO-06 aggregate source and threshold tables are in `data/bio06/`. |
 
-The selected CSVs preserve source numerical precision. `data/supplementary_data.zip` is the original 59-table aggregate supplement with its own manifest; it contains broader checkpoint, family, composition and nuclear tables. Figures S1–S4 were redrawn using portable code, so their presentation can differ slightly from the original snapshots without changing values. See [SOURCE_MAP.md](SOURCE_MAP.md) for provenance and rights.
+The selected CSVs preserve source numerical precision. `data/supplementary_data.zip` is the original 59-table aggregate supplement with its own manifest; it contains broader checkpoint, family, composition and nuclear tables. Additional aggregate tables accompanying the manuscript—the 240-task original-regular raw-family partition table, Table 1 case and full-cohort summaries, the eight-cell enumeration verification fixture, and the 80-order native MERCI saved-score replay—are in `data/analysis/` and `data/row_order_evidence/`. See [SOURCE_MAP.md](SOURCE_MAP.md) for provenance and rights.
 
 ## B1/B2 benchmark input preparation
 
@@ -92,4 +90,4 @@ The P2 precision config names the four historical sequences; `--all-outcomes` ru
 
 ## Software status
 
-Fixed releases and their distribution assets are available on the [release page](https://github.com/stors789/merci-rank-audit/releases). The CI workflow runs the core tests, small driver/preparation checks, all ten figure redraws and the synthetic R coverage check. Project-authored code is MIT-licensed. The separate upstream MERCI checkout and underlying public data retain their own rights. No biological individual-cell data or restricted upstream source is included.
+Fixed releases and their distribution assets are available on the [release page](https://github.com/stors789/merci-rank-audit/releases). The CI workflow runs the core tests, small driver/preparation checks, all nine figure redraws and the synthetic R coverage check. Project-authored code is MIT-licensed. The separate upstream MERCI checkout and underlying public data retain their own rights. No biological individual-cell data or restricted upstream source is included.

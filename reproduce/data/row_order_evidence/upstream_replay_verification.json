@@ -1,0 +1,9 @@
+{
+  "orders": 80,
+  "cutoff_predictions": 800,
+  "Neff_rank_expression_replayed": true,
+  "RNA_rank_expression_replayed_only_for_full_saved_table_mode": true,
+  "actual_original_MERCI_predictor_executed": true,
+  "upstream_Neff_score_refitted": false,
+  "scope": "saved-score-table order replay, not raw read/Neff/SVR reconstruction"
+}

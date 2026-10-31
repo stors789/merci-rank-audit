@@ -5,11 +5,13 @@ The included plotting selections and supplement archive are project-authored agg
 | Data | Historical aggregate source |
 |---|---|
 | Figure 2 / S1 | `reports/merci_bio03_formal_benchmark_20261028/figures/real_equal_time_data.csv` and formal benchmark summaries. |
-| Figure 3 / S2 | `reports/merci_bio04_cohort_composition_20261029/summary/task_error_summary.csv`, `task_paired_summary.csv`, `condition_summary.csv`. |
-| Figure 4 | `reports/merci_bio04_cohort_composition_20261029/summary/condition_summary.csv`, `transition_summary.csv`, `channel_summary.csv`. |
-| Figure 5 / S3 | `reports/merci_bio05_nuclear_precision_20261029/summary/reference_quantiles.csv`, `reference_observed_signs.csv`, precision summaries, and fixed P2 nuclear aggregates. |
-| S4 | `reports/merci_installable_release_20261029/representative_results_rc5/union_prefixes.csv`. |
-| S5 | `reports/merci_bio06_fixed_input_sensitivity_20261029/rarity/rarity_comparison.csv`; exact thresholds and scenario summaries in the same BIO-06 report. |
+| Figure 3 | `reports/merci_bio04_cohort_composition_20261029/summary/task_error_summary.csv`, `task_paired_summary.csv`. |
+| Figure 4 (`FigureS2_cohorts.csv` context) | `reports/merci_bio04_cohort_composition_20261029/summary/condition_summary.csv`, `transition_summary.csv`, `channel_summary.csv`. |
+| Figure 5 / S2 | `reports/merci_bio05_nuclear_precision_20261029/summary/reference_quantiles.csv`, `reference_observed_signs.csv`, precision summaries, and fixed P2 nuclear aggregates. |
+| S3 | `reports/merci_installable_release_20261029/representative_results_rc5/union_prefixes.csv`. |
+| S4 | `reports/merci_bio06_fixed_input_sensitivity_20261029/rarity/rarity_comparison.csv`; exact thresholds and scenario summaries in the same BIO-06 report. |
+| `data/analysis/` | 240-task original-regular raw-family partition table (`task_partition_table.csv`, rounded companion `merci_order_indeterminacy_by_task.csv`), 51-case benchmark `reference_summary.csv`, four-row `table1_case_summary.csv`, and eight-cell enumeration verification fixture. |
+| `data/row_order_evidence/` | 80-order native MERCI saved-score replay (`complete_score_table_orders.csv`, `P2_neff_fixed_rna_orders.csv`, `upstream_replay_verification.json`). |
 | 59-table ZIP | `manuscripts/merci_rank_audit_bioinformatics_20261029_revision01/supplementary_data.zip`, including `MANIFEST.json` with source paths and original byte hashes. |
 | 44 synthetic NPZ fixtures | Frozen BIO-03 synthetic prepared arrays; identifiers are synthetic, not biological cell IDs. |
 | Drivers | Project-authored BIO-03 benchmark workers, BIO-04 exact family/cohort functions, BIO-05 nuclear worker/FWL and BIO-06 scenario/rarity functions, adapted to explicit input and output paths. |

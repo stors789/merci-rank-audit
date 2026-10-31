@@ -1,0 +1,11 @@
+object,ordering,mode,raw,default_gate,gated,marker_missing_selected,scores_refitted
+P2_myeloid,barcode_asc,Neff_only_fixed_RNA,812,False,0,78,False
+P2_myeloid,barcode_desc,Neff_only_fixed_RNA,824,False,0,88,False
+P2_myeloid,MT_reads_asc,Neff_only_fixed_RNA,878,True,878,16,False
+P2_myeloid,MT_reads_desc,Neff_only_fixed_RNA,746,False,0,165,False
+P2_myeloid,nuclear_UMI_asc,Neff_only_fixed_RNA,867,False,0,29,False
+P2_myeloid,nuclear_UMI_desc,Neff_only_fixed_RNA,784,False,0,140,False
+P2_myeloid,observed_sites_asc,Neff_only_fixed_RNA,873,True,873,12,False
+P2_myeloid,observed_sites_desc,Neff_only_fixed_RNA,756,False,0,166,False
+P2_myeloid,RNA_rank_asc,Neff_only_fixed_RNA,1223,True,1223,154,False
+P2_myeloid,RNA_rank_desc,Neff_only_fixed_RNA,412,False,0,0,False

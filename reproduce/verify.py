@@ -24,7 +24,7 @@ def main():
         command=[sys.executable,str(root/path),*[str(x) for x in args]]
         subprocess.run(command,check=True,env=env,cwd=out)
     fig=out/'figures'
-    for script,data in (('main_figures.py','figures'),('supplement_figures.py','figures'),('bio06_figure.py','bio06')):
+    for script,data in (('main_figures.py','figures'),('supplement_figures.py','figures')):
         run('figures/'+script,'--data',root/'data'/data,'--output',fig)
     name='formal_n100_tie50_single50_rare_target'
     run('drivers/benchmark/run.py','--config',root/'configs/benchmark_smoke.json','--case',name,'--output',out/'benchmark')
@@ -72,10 +72,18 @@ def main():
     assert len(pd.read_csv(out/'sensitivity'/'scenarios.csv'))==4
     transitions=pd.read_csv(out/'sensitivity'/'transitions.csv');assert len(transitions)==12 and (transitions.changed==0).all()
     expected=['Figure1_workflow','Figure2_sampling','Figure3_annotation','Figure4_composition','Figure5_nuclear',
-              'FigureS1_gate','FigureS2_cohorts','FigureS3_precision','FigureS4_union','FigureS5_bio06']
+              'FigureS1_gate','FigureS2_precision','FigureS3_union','FigureS4_bio06']
     for name in expected:
         assert (fig/(name+'.png')).stat().st_size>1000
+        assert (fig/(name+'.svg')).stat().st_size>1000
         assert len(PdfReader(fig/(name+'.pdf')).pages)==1
+    raw_tasks=pd.read_csv(root/'data/analysis/tables/task_partition_table.csv')
+    assert len(raw_tasks)==240 and int((~raw_tasks.original_gate).sum())==44
+    t1=pd.read_csv(root/'data/analysis/tables/table1_case_summary.csv')
+    ref_sum=pd.read_csv(root/'data/analysis/tables/reference_summary.csv')
+    assert len(t1)==4 and len(ref_sum)==51
+    orders=pd.read_csv(root/'data/row_order_evidence/complete_score_table_orders.csv')
+    assert len(orders)==80
     result={'status':'PASS','benchmark':'known original-seed 100-proposal prefix',
             'cohort':'one synthetic task, ten design conditions and exhaustive transition totals',
             'b1_preparation':'two synthetic score tasks, frozen selection seeds and float64/NA prepared representation',

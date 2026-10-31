@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "fixed_cases": [
+    {
+      "case": "all_tied_single",
+      "legal_orders": 40320,
+      "passing_orders": 1440,
+      "all_members_match": true,
+      "simultaneous_maxima_checked_states": 13,
+      "condition_status": "exact"
+    },
+    {
+      "case": "all_tied_overlapping",
+      "legal_orders": 40320,
+      "passing_orders": 2808,
+      "all_members_match": true,
+      "simultaneous_maxima_checked_states": 13,
+      "condition_status": "exact"
+    },
+    {
+      "case": "multiple_nonzero_passing",
+      "legal_orders": 96,
+      "passing_orders": 48,
+      "all_members_match": true,
+      "simultaneous_maxima_checked_states": 10,
+      "condition_status": "exact"
+    },
+    {
+      "case": "no_ties_certain",
+      "legal_orders": 1,
+      "passing_orders": 1,
+      "all_members_match": true,
+      "simultaneous_maxima_checked_states": 8,
+      "condition_status": "exact"
+    },
+    {
+      "case": "no_ties_impossible",
+      "legal_orders": 1,
+      "passing_orders": 0,
+      "all_members_match": true,
+      "simultaneous_maxima_checked_states": 8,
+      "condition_status": "undefined_G_impossible"
+    },
+    {
+      "case": "all_tied_certain",
+      "legal_orders": 40320,
+      "passing_orders": 40320,
+      "all_members_match": true,
+      "simultaneous_maxima_checked_states": 13,
+      "condition_status": "exact"
+    }
+  ],
+  "each_fixed_member_checked": true,
+  "full_passing_witnesses_verified": 53,
+  "N5_query_cases": 1920,
+  "N5_total_full_orders": 71040,
+  "N5_G_impossible_cases": 972,
+  "N5_feasible_constrained_states_each_ten_maxima_checked": 12480,
+  "simultaneous_cutoff_maxima_match_full_enumeration": true,
+  "selected_and_omitted_reachability_checked_for_every_member": true,
+  "synthetic_examples": {
+    "conditional_core_increase": "all_tied_single",
+    "no_increase": "multiple_nonzero_passing"
+  },
+  "undefined_condition": "NA, not a false negative",
+  "scope": "new query checked against exhaustive finite rankings; not biological validation"
+}
